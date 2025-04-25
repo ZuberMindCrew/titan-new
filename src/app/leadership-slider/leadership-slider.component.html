@@ -25,14 +25,20 @@
         *ngFor="let slide of slides; let i = index" 
         class="slide" 
         [class.active]="i === currentSlide"
+        [class.prev]="i === getPrevIndex()"
+        [class.next]="i === getNextIndex()"
         [style.transform]="'translateX(' + ((i - currentSlide) * 100) + '%)'">
         
         <div class="main-image-container">
           <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
         </div>
         
-        <div class="thumbnail-container">
-          <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + (slide.title || 'project')" class="thumbnail-image">
+        <div class="thumbnail-container" (click)="goToSlide(getNextIndex())">
+          <img [src]="slides[getNextIndex()].thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
+          <div class="thumbnail-overlay">
+            <span class="next-indicator">{{getNextIndex() + 1}}—{{totalSlides}}</span>
+            <span class="view-text">View Next</span>
+          </div>
         </div>
       </div>
     </div>
