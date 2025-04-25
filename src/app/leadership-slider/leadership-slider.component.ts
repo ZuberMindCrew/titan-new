@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-leadership-slider',
@@ -6,55 +6,75 @@ import { Component } from '@angular/core';
   styleUrls: ['./leadership-slider.component.scss']
 })
 export class LeadershipSliderComponent {
+  @ViewChild("sliderContainer") sliderContainer!: ElementRef
+
+  currentSlide = 0
+  totalSlides = 4
+
   slides = [
     {
       id: 1,
-      title: "1. Enterprise P&L & Capital Leadership",
-      description:
-        "Former Managing Director at Bank of America Merrill Lynch, Citigroup, and AEGON NV — managing $500M+ in revenue and $16B+ in liquidity, driving global financial performance across banking and capital markets.",
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      active: true,
+      mainImage: "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
+      thumbnailImage:
+        "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
+      title: "Modern Architecture Building",
     },
     {
       id: 2,
-      title: "2. Strategic Advisory & Consulting",
-      description:
-        "Trusted advisor to C-suite executives at Fortune 500 companies, providing strategic guidance on market expansion, organizational transformation, and performance optimization.",
-      image:
-        "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      active: false,
+      mainImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
+      thumbnailImage:
+        "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
+      title: "River Flood Management",
     },
     {
       id: 3,
-      title: "3. Change Management & Transformation",
-      description:
-        "Led complex organizational transformations across global enterprises, implementing strategic initiatives that delivered measurable performance improvements and sustainable growth.",
-      image:
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      active: false,
+      mainImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
+      thumbnailImage:
+        "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
+      title: "Hunter Street Station",
+    },
+    {
+      id: 4,
+      mainImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
+      thumbnailImage:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HNwO0UOnKCvbgGwKeVqe61CQIN7nGB.png",
+      title: "Stadium Complex",
     },
   ]
 
-  currentIndex = 0
+  constructor() {}
 
-  ngOnInit(): void {
-    // Initialize the slider
-  }
-
-  setActiveSlide(index: number): void {
-    this.slides.forEach((slide) => (slide.active = false))
-    this.slides[index].active = true
-    this.currentIndex = index
-  }
+  ngOnInit(): void {}
 
   nextSlide(): void {
-    const nextIndex = (this.currentIndex + 1) % this.slides.length
-    this.setActiveSlide(nextIndex)
+    if (this.currentSlide < this.totalSlides - 1) {
+      this.currentSlide++
+    } else {
+      this.currentSlide = 0
+    }
   }
 
   prevSlide(): void {
-    const prevIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length
-    this.setActiveSlide(prevIndex)
+    if (this.currentSlide > 0) {
+      this.currentSlide--
+    } else {
+      this.currentSlide = this.totalSlides - 1
+    }
+  }
+
+  goToSlide(index: number): void {
+    if (index >= 0 && index < this.totalSlides) {
+      this.currentSlide = index
+    }
+  }
+
+  @HostListener("document:keydown", ["$event"])
+  handleKeyboardEvent(event: KeyboardEvent): void {
+    if (event.key === "ArrowRight") {
+      this.nextSlide()
+    }
+    if (event.key === "ArrowLeft") {
+      this.prevSlide()
+    }
   }
 }

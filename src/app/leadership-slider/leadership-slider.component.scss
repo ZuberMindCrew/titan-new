@@ -1,285 +1,200 @@
-.leadership-slider-section {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-    overflow: hidden;
+.leadership-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 800px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.slider-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-counter {
+  position: absolute;
+  // top: 20px;
+  left: 32px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  z-index: 10;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navigation-arrows {
+  position: absolute;
+  // top: 20px;
+  right: 32px;
+  display: flex;
+  gap: 16px;
+  z-index: 10;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    color: #555;
+    transform: scale(1.1);
   }
   
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.slides-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  
+  &.active {
+    z-index: 5;
+  }
+}
+
+.main-image-container {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 32px;
+  
+  &:hover .main-image {
+    transform: scale(1.05);
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.thumbnail-container {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 25%;
+  max-width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 16px;
+  z-index: 6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  &:hover .thumbnail-image {
+    transform: scale(1.05);
+  }
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .leadership-slider {
+    height: 80vh;
   }
   
-  .slider-container {
-    position: relative;
+  .main-image-container {
+    width: 70%;
+    margin: 24px;
+  }
+  
+  .thumbnail-container {
+    width: 30%;
+    max-width: 250px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership-slider {
+    height: 70vh;
+  }
+  
+  .slide-counter {
+    font-size: 16px;
+    top: 16px;
+    left: 24px;
+  }
+  
+  .navigation-arrows {
+    top: 16px;
+    right: 24px;
+  }
+  
+  .main-image-container {
     width: 100%;
-    height: 600px;
-    overflow: hidden;
+    margin: 16px;
   }
   
-  .slides-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  .thumbnail-container {
+    top: auto;
+    bottom: 32px;
+    right: 32px;
+    width: 40%;
+    max-width: 200px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-slider {
+    height: 60vh;
   }
   
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-    
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      z-index: 1;
-    }
+  .slide-counter {
+    font-size: 14px;
+    top: 12px;
+    left: 16px;
   }
   
-  .slide-content {
-    flex: 1;
-    padding: 60px 40px 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #0F0C29;
-      margin-bottom: 30px;
-      line-height: 1.2;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
-      
-      .active & {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #333;
-      margin-bottom: 40px;
-      max-width: 600px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
-      
-      .active & {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  .navigation-arrows {
+    top: 12px;
+    right: 16px;
+    gap: 12px;
   }
   
-  .slide-image-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  .main-image-container {
+    margin: 12px;
   }
   
-  .image-wrapper {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-    
-    &:hover {
-      transform: scale(1.03);
-      
-      img {
-        transform: scale(1.1);
-      }
-    }
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-      transform-origin: center;
-    }
-    
-    .active & {
-      opacity: 0;
-      transform: translateX(50px);
-      animation: slideInRight 0.8s ease 0.7s forwards;
-    }
+  .thumbnail-container {
+    bottom: 24px;
+    right: 24px;
+    width: 50%;
+    max-width: 160px;
+    height: 120px;
   }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background-color: white;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-    
-    .arrow {
-      font-size: 20px;
-      color: #333;
-    }
-    
-    &.prev-button {
-      left: 20px;
-    }
-    
-    &.next-button {
-      right: 20px;
-    }
-  }
-  
-  .slide-indicators {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    
-    .indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #ddd;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      
-      &.active {
-        background-color: #0F0C29;
-        transform: scale(1.2);
-      }
-      
-      &:hover {
-        background-color: #bbb;
-      }
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .slide {
-      flex-direction: column;
-    }
-    
-    .slide-content {
-      padding: 40px 20px;
-      order: 2;
-      
-      h1 {
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-      
-      p {
-        font-size: 16px;
-        margin-bottom: 30px;
-      }
-    }
-    
-    .slide-image-container {
-      order: 1;
-      padding: 20px 20px 0;
-    }
-    
-    .image-wrapper {
-      height: 300px;
-    }
-    
-    .slider-container {
-      height: auto;
-      min-height: 700px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .leadership-slider-section {
-      padding: 60px 0;
-    }
-    
-    .slide-content {
-      h1 {
-        font-size: 26px;
-      }
-      
-      p {
-        font-size: 15px;
-      }
-    }
-    
-    .image-wrapper {
-      height: 250px;
-    }
-    
-    .slider-container {
-      min-height: 600px;
-    }
-    
-    .nav-button {
-      width: 40px;
-      height: 40px;
-      
-      .arrow {
-        font-size: 16px;
-      }
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .leadership-slider-section {
-      padding: 40px 0;
-    }
-    
-    .slide-content {
-      h1 {
-        font-size: 22px;
-      }
-      
-      p {
-        font-size: 14px;
-      }
-    }
-    
-    .image-wrapper {
-      height: 200px;
-    }
-    
-    .slider-container {
-      min-height: 550px;
-    }
-  }
-  
+}
