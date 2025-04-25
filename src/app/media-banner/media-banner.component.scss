@@ -1,0 +1,44 @@
+/* Media Banner */
+.media-banner {
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .media-banner h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .media-logos {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(200px * 14); /* Adjust based on number of logos */
+  }
+  
+  .media-logo {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0) invert(1);
+  }
+  
+  .media-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 7)); /* Half the total width */
+    }
+  }
+  

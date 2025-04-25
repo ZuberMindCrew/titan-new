@@ -1,0 +1,22 @@
+<section class="brands-section">
+    <div class="container">
+      <h2>Organizations & Brands Impacted by Us</h2>
+      
+      <div class="logos-container">
+        <div class="logos-slider">
+          <div class="logos-track">
+            <!-- First set of logos -->
+            <div class="logo-item" *ngFor="let logo of logos">
+              <img [src]="logo.url" [alt]="logo.name + ' logo'">
+            </div>
+            
+            <!-- Duplicated set for seamless scrolling -->
+            <div class="logo-item" *ngFor="let logo of logos">
+              <img [src]="logo.url" [alt]="logo.name + ' logo'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

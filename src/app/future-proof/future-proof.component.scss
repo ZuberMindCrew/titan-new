@@ -1,0 +1,153 @@
+.future-proof-section {
+    background-color: #F9F7F6;
+    padding: 100px 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+  
+  .text-content {
+    flex: 1.2;
+  }
+  
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #0F0C29;
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.5px;
+  }
+  
+  .intro-text, .expertise-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  
+  .company-name {
+    color: maroon;
+    font-weight: 600;
+  }
+  
+  .highlight {
+    color: maroon;
+    font-weight: 600;
+  }
+  
+  .image-container {
+    flex: 1;
+    border-radius: 24px;
+    overflow: hidden; /* Important for containing the zoom effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+    
+    &:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      
+      img {
+        transform: scale(1.08);
+        filter: brightness(1.05);
+      }
+    }
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 450px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+  
+  @media (max-width: 1200px) {
+    .future-proof-section {
+      padding: 80px 0;
+    }
+    
+    .container {
+      padding: 0 30px;
+    }
+    
+    .content-wrapper {
+      gap: 60px;
+    }
+    
+    h2 {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    h2 {
+      font-size: 28px;
+    }
+    
+    .intro-text, .expertise-text {
+      font-size: 16px;
+    }
+    
+    .content-wrapper {
+      gap: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .future-proof-section {
+      padding: 60px 0;
+    }
+    
+    .content-wrapper {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .text-content, .image-container {
+      flex: none;
+      width: 100%;
+    }
+    
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .future-proof-section {
+      padding: 50px 0;
+    }
+    
+    .container {
+      padding: 0 20px;
+    }
+    
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .intro-text, .expertise-text {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+  
+  

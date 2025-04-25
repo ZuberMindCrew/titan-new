@@ -1,0 +1,26 @@
+<header [ngClass]="{'scrolled': isScrolled}">
+    <div class="logo">
+      <img src="https://framerusercontent.com/images/luxib5LKoUfr1g6mewlE5zXRsP4.png" alt="Titan Edge Advisory Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <a href="#schedule" class="cta-button">SCHEDULE A STRATEGY SESSION</a>
+    <div class="hamburger" [ngClass]="{'active': isMobileMenuOpen}" (click)="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  
+  <div class="mobile-menu" [ngClass]="{'active': isMobileMenuOpen}">
+      <a href="#about" (click)="closeMobileMenu()">About Us</a>
+      <a href="#services" (click)="closeMobileMenu()">Services</a>
+      <a href="#case-studies" (click)="closeMobileMenu()">Case Studies</a>
+    <a href="#contact" (click)="closeMobileMenu()">Contact Us</a>
+    <a href="#schedule" class="mobile-cta" (click)="closeMobileMenu()">SCHEDULE A STRATEGY SESSION</a>
+  </div>
+  
