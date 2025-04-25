@@ -1,57 +1,43 @@
 <section class="leadership-slider-section">
     <div class="container">
-      <div class="slider-header">
-        <h2>Our Leadership Team</h2>
-        <div class="slider-controls">
-          <button class="slider-btn prev-btn" (click)="prevSlide()" aria-label="Previous slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="slider-btn next-btn" (click)="nextSlide()" aria-label="Next slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-      </div>
-      
-      <div class="slider-container" 
-           (touchstart)="touchStart($event)" 
-           (touchmove)="touchMove($event)" 
-           (touchend)="touchEnd()">
-        <div class="slider-track" #sliderTrack>
-          <div class="slide" *ngFor="let slide of leadershipSlides; let i = index" [class.active]="i === currentSlide">
+      <div class="slider-container">
+        <!-- Slides -->
+        <div class="slides-wrapper">
+          <div 
+            *ngFor="let slide of slides; let i = index" 
+            class="slide" 
+            [ngClass]="{'active': slide.active}"
+            [@slideAnimation]="slide.active ? 'active' : 'inactive'">
+            
             <div class="slide-content">
-              <div class="main-image-container">
-                <div class="image-wrapper">
-                  <img [src]="slide.mainImage" [alt]="slide.name + ' - ' + slide.title" class="main-image">
-                </div>
+              <h1>{{slide.title}}</h1>
+              <p>{{slide.description}}</p>
+              
+              <div class="slide-indicators">
+                <span 
+                  *ngFor="let dot of slides; let j = index" 
+                  class="indicator" 
+                  [ngClass]="{'active': j === currentIndex}"
+                  (click)="setActiveSlide(j)">
+                </span>
               </div>
-              <div class="thumbnail-container">
-                <div class="thumbnail-wrapper">
-                  <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + slide.name" class="thumbnail-image">
-                </div>
-              </div>
-              <div class="slide-info">
-                <h3 class="leader-name">{{slide.name}}</h3>
-                <h4 class="leader-title">{{slide.title}}</h4>
-                <p class="leader-description">{{slide.description}}</p>
+            </div>
+            
+            <div class="slide-image-container">
+              <div class="image-wrapper">
+                <img [src]="slide.image" [alt]="'Leadership image for ' + slide.title">
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="slider-pagination">
-        <div class="pagination-dots">
-          <span 
-            *ngFor="let slide of leadershipSlides; let i = index" 
-            class="pagination-dot" 
-            [class.active]="i === currentSlide"
-            (click)="goToSlide(i)">
-          </span>
-        </div>
+        
+        <!-- Navigation buttons -->
+        <button class="nav-button prev-button" (click)="prevSlide()">
+          <span class="arrow">&#10094;</span>
+        </button>
+        <button class="nav-button next-button" (click)="nextSlide()">
+          <span class="arrow">&#10095;</span>
+        </button>
       </div>
     </div>
   </section>
