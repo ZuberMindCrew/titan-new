@@ -33,26 +33,26 @@ export class LeadershipSliderComponent {
       id: 2,
       mainImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
       thumbnailImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
-      title: "Strategic Advisory & Consulting",
+      title: "Strategic Growth & GTM Execution",
       description:
-        "Led transformational initiatives for Fortune 500 companies, delivering strategic growth plans and operational excellence frameworks that resulted in 30%+ efficiency improvements and $200M+ in cost savings.",
+        "Led U.S. and North American expansion for financial and fintech institutions, including B2B payments and lending. Built and executed GTM strategies that fueled scale, compliance, and infrastructure transformation.",
     },
     {
       id: 3,
       mainImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
-      title: "Organizational Development",
+      title: "Crisis Leadership & Transformation",
       description:
-        "Specialized in executive leadership development and C-suite alignment, building high-performance teams and implementing change management strategies that accelerated growth and innovation.",
+        "Guided organizations through high-stakes scenarios — including corporate restructures, financial crises, and industry disasters (e.g., BP, PG&E, ExxonMobil & ConocoPhillips) — with expertise in stabilization and turnaround strategy.",
     },
     {
       id: 4,
       mainImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       thumbnailImage:
         "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
-      title: "Market Expansion & Growth",
+      title: "Capital Advisory & Leadership Acceleration",
       description:
-        "Developed and executed market entry strategies across EMEA and APAC regions, establishing new revenue streams and strategic partnerships that generated $350M+ in new business opportunities.",
+        "CEO & Founder of Titan Edge Advisory, since 2016, recognized by Forbes Council. Co-founded an impact investment firm and built strategic executive programs that drive exponential leadership growth and capital efficiency across high-growth businesses.",
     },
   ]
 
