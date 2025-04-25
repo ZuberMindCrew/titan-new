@@ -163,13 +163,13 @@
   overflow: hidden;
   border-radius: 16px;
   z-index: 6;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  
     
     .thumbnail-image {
       transform: scale(1.05);
@@ -182,10 +182,11 @@
 }
 
 .thumbnail-image {
-  width: 100%;
+  width: 230px;
   height: 100%;
   object-fit: cover;
   transition: transform 0.8s ease;
+  margin-left:80px;
 }
 
 .thumbnail-overlay {
@@ -202,6 +203,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   color: white;
+  margin-left:80px;
 }
 
 .next-indicator {
@@ -329,12 +331,12 @@
   
   .slide-counter {
     font-size: 14px;
-    top: 12px;
+    top: 22px;
     left: 16px;
   }
   
   .navigation-arrows {
-    top: 12px;
+    top: 22px;
     right: 16px;
     gap: 12px;
   }
@@ -344,11 +346,7 @@
   }
   
   .thumbnail-container {
-    bottom: 24px;
-    right: 24px;
-    width: 50%;
-    max-width: 160px;
-    height: 120px;
+  display: none;
   }
   
   .image-text-overlay {
