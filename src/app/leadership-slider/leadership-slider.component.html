@@ -31,10 +31,17 @@
         
         <div class="main-image-container">
           <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
+          <div class="image-text-overlay">
+            <div class="slide-number">{{slide.id}}</div>
+            <div class="slide-content">
+              <h2 class="slide-title">{{slide.title}}</h2>
+              <p class="slide-description">{{slide.description}}</p>
+            </div>
+          </div>
         </div>
         
         <div class="thumbnail-container" (click)="goToSlide(getNextIndex())">
-          <img [src]="slides[getNextIndex()].thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
+          <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
           <div class="thumbnail-overlay">
             <span class="next-indicator">{{getNextIndex() + 1}}—{{totalSlides}}</span>
             <span class="view-text">View Next</span>

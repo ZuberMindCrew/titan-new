@@ -1,9 +1,17 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, type ElementRef, HostListener, ViewChild } from "@angular/core"
+
+interface SlideItem {
+  id: number
+  mainImage: string
+  thumbnailImage: string
+  title: string
+  description: string
+}
 
 @Component({
-  selector: 'app-leadership-slider',
-  templateUrl: './leadership-slider.component.html',
-  styleUrls: ['./leadership-slider.component.scss']
+  selector: "app-leadership-slider",
+  templateUrl: "./leadership-slider.component.html",
+  styleUrls: ["./leadership-slider.component.scss"],
 })
 export class LeadershipSliderComponent {
   @ViewChild("sliderContainer") sliderContainer!: ElementRef
@@ -12,31 +20,39 @@ export class LeadershipSliderComponent {
   totalSlides = 4
   isAnimating = false
 
-  slides = [
+  slides: SlideItem[] = [
     {
       id: 1,
       mainImage: "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
       thumbnailImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
-      title: "Modern Architecture Building",
+      title: "Enterprise P&L & Capital Leadership",
+      description:
+        "Former Managing Director at Bank of America Merrill Lynch, Citigroup, and AEGON NV — managing $500M+ in revenue and $16B+ in liquidity, driving global financial performance across banking and capital markets.",
     },
     {
       id: 2,
       mainImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
       thumbnailImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
-      title: "River Flood Management",
+      title: "Strategic Advisory & Consulting",
+      description:
+        "Led transformational initiatives for Fortune 500 companies, delivering strategic growth plans and operational excellence frameworks that resulted in 30%+ efficiency improvements and $200M+ in cost savings.",
     },
     {
       id: 3,
       mainImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
-      title: "Hunter Street Station",
+      title: "Organizational Development",
+      description:
+        "Specialized in executive leadership development and C-suite alignment, building high-performance teams and implementing change management strategies that accelerated growth and innovation.",
     },
     {
       id: 4,
       mainImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       thumbnailImage:
         "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
-      title: "Stadium Complex",
+      title: "Market Expansion & Growth",
+      description:
+        "Developed and executed market entry strategies across EMEA and APAC regions, establishing new revenue streams and strategic partnerships that generated $350M+ in new business opportunities.",
     },
   ]
 
@@ -65,7 +81,7 @@ export class LeadershipSliderComponent {
 
     setTimeout(() => {
       this.isAnimating = false
-    }, 500)
+    }, 800)
   }
 
   prevSlide(): void {
@@ -89,7 +105,7 @@ export class LeadershipSliderComponent {
 
     setTimeout(() => {
       this.isAnimating = false
-    }, 500)
+    }, 800)
   }
 
   goToSlide(index: number): void {
@@ -103,7 +119,7 @@ export class LeadershipSliderComponent {
 
     setTimeout(() => {
       this.isAnimating = false
-    }, 500)
+    }, 800)
   }
 
   getPrevIndex(): number {
