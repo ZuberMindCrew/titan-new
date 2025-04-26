@@ -1,16 +1,11 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('heroVideo') videoElement!: ElementRef<HTMLVideoElement>;
-  
-  videoUrl: SafeUrl;
-  
+export class HeroComponent implements OnInit, OnDestroy {
   serviceAreas = [
     { index: 0, number: "01.", title: "C-Suite Alignment", active: false },
     { index: 1, number: "02.", title: "Market Expansion", active: true },
@@ -21,78 +16,16 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
 
   currentIndex = 1;
   cycleInterval: any;
-  videoError = false;
-  videoLoaded = false;
 
-  constructor(private sanitizer: DomSanitizer) {
-    // Sanitize the URL to prevent security issues
-    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/dv2zi35xn/video/upload/v1745659772/skrn8yaeifs91c0mdjyh.mp4');
-  }
+  constructor() {}
 
   ngOnInit() {
     this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000);
   }
 
-  ngAfterViewInit() {
-    if (this.videoElement && this.videoElement.nativeElement) {
-      const video = this.videoElement.nativeElement;
-      
-      // Force load the video
-      video.load();
-
-      // Add event listeners
-      video.addEventListener('loadeddata', () => {
-        console.log('Video loaded successfully');
-        this.videoLoaded = true;
-        this.videoError = false;
-        
-        // Try to play the video
-        const playPromise = video.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            console.warn('Auto-play failed:', error);
-            // Try playing again with user interaction
-            document.addEventListener('click', () => {
-              video.play().catch(e => console.warn('Play on click failed:', e));
-            }, { once: true });
-          });
-        }
-      });
-
-      video.addEventListener('error', (e: any) => {
-        console.error('Video error occurred:', e.target.error);
-        this.videoError = true;
-        this.videoLoaded = false;
-        
-        // Try to reload video on error
-        setTimeout(() => {
-          video.load();
-          video.play().catch(err => console.warn('Retry play failed:', err));
-        }, 2000);
-      });
-
-      // Additional event listeners for debugging
-      video.addEventListener('waiting', () => console.log('Video is waiting for data...'));
-      video.addEventListener('playing', () => console.log('Video is playing...'));
-      video.addEventListener('pause', () => console.log('Video is paused...'));
-      video.addEventListener('stalled', () => console.log('Video has stalled...'));
-    }
-  }
-
   ngOnDestroy() {
     if (this.cycleInterval) {
       clearInterval(this.cycleInterval);
-    }
-
-    // Clean up video event listeners
-    if (this.videoElement && this.videoElement.nativeElement) {
-      const video = this.videoElement.nativeElement;
-      video.removeEventListener('loadeddata', () => {});
-      video.removeEventListener('error', () => {});
-      video.removeEventListener('waiting', () => {});
-      video.removeEventListener('playing', () => {});
-      video.removeEventListener('pause', () => {});
-      video.removeEventListener('stalled', () => {});
     }
   }
 
@@ -111,11 +44,5 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
       clearInterval(this.cycleInterval);
     }
     this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000);
-  }
-
-  onVideoError() {
-    console.error('Video error occurred');
-    this.videoError = true;
-    this.videoLoaded = false;
   }
 }

@@ -22,6 +22,19 @@
     }
   }
   
+  .gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/01/f7/16/01f7163ba8770f3cf964a269004bad67.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  
   .hero-video {
     position: absolute;
     top: 50%;
@@ -40,7 +53,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(20, 20, 40, 0.7), rgba(20, 20, 40, 0.7));
+    background: linear-gradient(rgba(20, 20, 40, 0.8), rgba(20, 20, 40, 0.8));
     z-index: 1;
   }
   
