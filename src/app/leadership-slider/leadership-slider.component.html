@@ -1,5 +1,5 @@
-<div class="leadership-slider" #sliderContainer style="margin-bottom: 120px;">
-  <div class="slider-content">
+<div class="leadership-slider" #sliderContainer  >
+  <div class="slider-content" >
     <div class="slider-controls">
       <!-- Slide counter -->
       <div class="slide-counter">
@@ -31,7 +31,7 @@
         [class.next]="i === getNextIndex()"
         [style.transform]="'translateX(' + ((i - currentSlide) * 100) + '%)'">
         
-        <div class="main-image-container">
+        <div class="main-image-container" >
           <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
           
           <!-- Top overlay for slide number and title -->
@@ -43,7 +43,7 @@
           </div>
           
           <!-- Bottom overlay for description only -->
-          <div class="image-bottom-overlay">
+          <div class="image-bottom-overlay" >
             <p class="slide-description">{{slide.description}}</p>
           </div>
         </div>
