@@ -9,6 +9,8 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('heroVideo') videoElement!: ElementRef<HTMLVideoElement>;
   
+  videoUrl: SafeUrl;
+  
   serviceAreas = [
     { index: 0, number: "01.", title: "C-Suite Alignment", active: false },
     { index: 1, number: "02.", title: "Market Expansion", active: true },
@@ -22,7 +24,10 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   videoError = false;
   videoLoaded = false;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {
+    // Sanitize the URL to prevent security issues
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://res.cloudinary.com/dv2zi35xn/video/upload/v1745659772/skrn8yaeifs91c0mdjyh.mp4');
+  }
 
   ngOnInit() {
     this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000);
@@ -32,7 +37,7 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.videoElement && this.videoElement.nativeElement) {
       const video = this.videoElement.nativeElement;
       
-      // Load the video
+      // Force load the video
       video.load();
 
       // Add event listeners
@@ -54,10 +59,16 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       });
 
-      video.addEventListener('error', (e) => {
-        console.error('Error loading video:', e);
+      video.addEventListener('error', (e: any) => {
+        console.error('Video error occurred:', e.target.error);
         this.videoError = true;
         this.videoLoaded = false;
+        
+        // Try to reload video on error
+        setTimeout(() => {
+          video.load();
+          video.play().catch(err => console.warn('Retry play failed:', err));
+        }, 2000);
       });
 
       // Additional event listeners for debugging

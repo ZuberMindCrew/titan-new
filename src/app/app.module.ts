@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,6 @@ import { MediaBannerComponent } from './media-banner/media-banner.component';
 import { FutureProofComponent } from './future-proof/future-proof.component';
 import { BrandsComponent } from './brands/brands.component';
 import { LeadershipSliderComponent } from './leadership-slider/leadership-slider.component';
-
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { LeadershipSliderComponent } from './leadership-slider/leadership-slider
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
