@@ -1,25 +1,32 @@
 <section class="hero">
-    <div class="hero-video-container">
-      <div class="gif-background"></div>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <h1>We're The Strategic Advisors Fast-Moving Companies Trust To Accelerate Their Growth Plans</h1>
-      <p>(Even In Uncertain Times)</p>
-    </div>
-    
-    <div class="service-areas-container">
-      <div class="service-areas">
-        <div 
-          *ngFor="let area of serviceAreas" 
-          class="service-area" 
-          [ngClass]="{'active': area.active}"
-          (click)="setActiveArea(area.index)">
-          <div class="service-number">{{area.number}}</div>
-          <div class="service-line"></div>
-          <div class="service-title">{{area.title}}</div>
-        </div>
+  <div class="hero-video-container" [ngClass]="{'video-error': videoError}">
+    <video 
+      playsinline 
+      loop 
+      preload="metadata" 
+      class="hero-video" 
+      (error)="onVideoError()"
+      [defaultMuted]="true">
+      <source src="https://framerusercontent.com/assets/dnfMrDDlXJ23Qfabz28pEpG1L90.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>We're The Strategic Advisors Fast-Moving Companies Trust To Accelerate Their Growth Plans</h1>
+    <p>(Even In Uncertain Times)</p>
+  </div>
+  
+  <div class="service-areas-container">
+    <div class="service-areas">
+      <div 
+        *ngFor="let area of serviceAreas" 
+        class="service-area" 
+        [ngClass]="{'active': area.active}"
+        (click)="setActiveArea(area.index)">
+        <div class="service-number">{{area.number}}</div>
+        <div class="service-line"></div>
+        <div class="service-title">{{area.title}}</div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
