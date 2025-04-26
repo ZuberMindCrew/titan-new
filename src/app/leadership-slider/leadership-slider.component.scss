@@ -269,7 +269,7 @@
   object-fit: cover;
   transition: transform 0.8s ease;
   display: block;
-  border-radius: inherit; // Ensure image corners are rounded
+  // border-radius: 30px; // Ensure image corners are rounded
   
   @media (max-width: 768px) {
     height: calc(100% - 0px); // Make room for thumbnail at bottom
@@ -322,8 +322,7 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
   color: white;
   border-radius: 16px 16px 16px 16px !important;
-  border-bottom-left-radius: inherit !important;
-  border-bottom-right-radius: inherit !important;
+
   
   @media (max-width: 1200px) {
     padding: 35px;
