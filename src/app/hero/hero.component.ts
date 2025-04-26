@@ -42,9 +42,16 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
         this.videoError = false;
         
         // Try to play the video
-        video.play().catch(error => {
-          console.warn('Auto-play failed:', error);
-        });
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            console.warn('Auto-play failed:', error);
+            // Try playing again with user interaction
+            document.addEventListener('click', () => {
+              video.play().catch(e => console.warn('Play on click failed:', e));
+            }, { once: true });
+          });
+        }
       });
 
       video.addEventListener('error', (e) => {
