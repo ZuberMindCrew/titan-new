@@ -31,8 +31,8 @@
         [class.next]="i === getNextIndex()"
         [style.transform]="'translateX(' + ((i - currentSlide) * 100) + '%)'">
         
-        <div class="main-image-container" >
-          <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
+        <div class="main-image-container">
+          <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image" >
           
           <!-- Top overlay for slide number and title -->
           <div class="image-top-overlay">
