@@ -10,6 +10,7 @@ import { FutureProofComponent } from './future-proof/future-proof.component';
 import { BrandsComponent } from './brands/brands.component';
 import { LeadershipSliderComponent } from './leadership-slider/leadership-slider.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

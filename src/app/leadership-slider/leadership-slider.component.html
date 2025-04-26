@@ -1,4 +1,4 @@
-<div class="leadership-slider" #sliderContainer  style="margin-bottom: 20%;">
+<div class="leadership-slider" #sliderContainer style="margin-bottom: 120px;">
   <div class="slider-content">
     <div class="slider-controls">
       <!-- Slide counter -->
@@ -31,7 +31,7 @@
         [class.next]="i === getNextIndex()"
         [style.transform]="'translateX(' + ((i - currentSlide) * 100) + '%)'">
         
-        <div class="main-image-container" >
+        <div class="main-image-container">
           <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
           
           <!-- Top overlay for slide number and title -->
