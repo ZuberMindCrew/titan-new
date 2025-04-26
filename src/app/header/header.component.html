@@ -17,9 +17,10 @@
   </header>
   
   <div class="mobile-menu" [ngClass]="{'active': isMobileMenuOpen}">
-      <a href="#about" (click)="closeMobileMenu()">About Us</a>
-      <a href="#services" (click)="closeMobileMenu()">Services</a>
-      <a href="#case-studies" (click)="closeMobileMenu()">Case Studies</a>
+    <button class="mobile-menu-close" (click)="closeMobileMenu()" aria-label="Close menu">&times;</button>
+    <a href="#about" (click)="closeMobileMenu()">About Us</a>
+    <a href="#services" (click)="closeMobileMenu()">Services</a>
+    <a href="#case-studies" (click)="closeMobileMenu()">Case Studies</a>
     <a href="#contact" (click)="closeMobileMenu()">Contact Us</a>
     <a href="#schedule" class="mobile-cta" (click)="closeMobileMenu()">SCHEDULE A STRATEGY SESSION</a>
   </div>
