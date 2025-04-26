@@ -1,22 +1,24 @@
 <div class="leadership-slider" #sliderContainer>
   <div class="slider-content">
-    <!-- Slide counter -->
-    <div class="slide-counter">
-      {{currentSlide + 1}}—{{totalSlides}}
-    </div>
-    
-    <!-- Navigation arrows -->
-    <div class="navigation-arrows">
-      <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="nav-arrow next" (click)="nextSlide()" aria-label="Next slide">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+    <div class="slider-controls">
+      <!-- Slide counter -->
+      <div class="slide-counter">
+        {{currentSlide + 1}}—{{totalSlides}}
+      </div>
+      
+      <!-- Navigation arrows -->
+      <div class="navigation-arrows">
+        <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="nav-arrow next" (click)="nextSlide()" aria-label="Next slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
     
     <!-- Slides -->
@@ -40,8 +42,8 @@
           </div>
         </div>
         
-        <div class="thumbnail-container" (click)="goToSlide(getNextIndex())">
-          <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
+        <div class="thumbnail-container" (click)="goToSlide(getNextIndex())" (touchend)="goToSlide(getNextIndex())">
+          <img [src]="slides[getNextIndex()].thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
           <div class="thumbnail-overlay">
             <span class="next-indicator">{{getNextIndex() + 1}}—{{totalSlides}}</span>
             <span class="view-text">View Next</span>
