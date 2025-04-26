@@ -1,66 +1,103 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent {
-  serviceAreas =[
+export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('heroVideo') videoElement!: ElementRef<HTMLVideoElement>;
+  
+  serviceAreas = [
     { index: 0, number: "01.", title: "C-Suite Alignment", active: false },
-    { index: 1, number: "02.", title: "Market Expansion", active: true }, // Changed to active
+    { index: 1, number: "02.", title: "Market Expansion", active: true },
     { index: 2, number: "03.", title: "Change Management", active: false },
     { index: 3, number: "04.", title: "Communications", active: false },
-    { index: 4, number: "05.", title: "Organizational Performance", active: false }, // Changed to inactive
-  ]
+    { index: 4, number: "05.", title: "Organizational Performance", active: false },
+  ];
 
-  currentIndex = 1 // Start with Market Expansion active (index 1)
-  cycleInterval: any
-  videoError = false
+  currentIndex = 1;
+  cycleInterval: any;
+  videoError = false;
+  videoLoaded = false;
+
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    // Start automatic cycling
-    this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000)
+    this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000);
+  }
 
-    // Handle video loading
-    setTimeout(() => {
-      const video = document.querySelector("video")
-      if (video) {
-        video.load()
-        video.play().catch((error) => {
-          console.log("Video autoplay failed:", error)
-          this.videoError = true
-        })
-      }
-    }, 100)
+  ngAfterViewInit() {
+    if (this.videoElement && this.videoElement.nativeElement) {
+      const video = this.videoElement.nativeElement;
+      
+      // Load the video
+      video.load();
+
+      // Add event listeners
+      video.addEventListener('loadeddata', () => {
+        console.log('Video loaded successfully');
+        this.videoLoaded = true;
+        this.videoError = false;
+        
+        // Try to play the video
+        video.play().catch(error => {
+          console.warn('Auto-play failed:', error);
+        });
+      });
+
+      video.addEventListener('error', (e) => {
+        console.error('Error loading video:', e);
+        this.videoError = true;
+        this.videoLoaded = false;
+      });
+
+      // Additional event listeners for debugging
+      video.addEventListener('waiting', () => console.log('Video is waiting for data...'));
+      video.addEventListener('playing', () => console.log('Video is playing...'));
+      video.addEventListener('pause', () => console.log('Video is paused...'));
+      video.addEventListener('stalled', () => console.log('Video has stalled...'));
+    }
   }
 
   ngOnDestroy() {
-    // Clear interval when component is destroyed
     if (this.cycleInterval) {
-      clearInterval(this.cycleInterval)
+      clearInterval(this.cycleInterval);
+    }
+
+    // Clean up video event listeners
+    if (this.videoElement && this.videoElement.nativeElement) {
+      const video = this.videoElement.nativeElement;
+      video.removeEventListener('loadeddata', () => {});
+      video.removeEventListener('error', () => {});
+      video.removeEventListener('waiting', () => {});
+      video.removeEventListener('playing', () => {});
+      video.removeEventListener('pause', () => {});
+      video.removeEventListener('stalled', () => {});
     }
   }
 
   cycleServiceAreas() {
-    this.serviceAreas.forEach((area) => (area.active = false))
-    this.currentIndex = (this.currentIndex + 1) % this.serviceAreas.length
-    this.serviceAreas[this.currentIndex].active = true
+    this.serviceAreas.forEach((area) => (area.active = false));
+    this.currentIndex = (this.currentIndex + 1) % this.serviceAreas.length;
+    this.serviceAreas[this.currentIndex].active = true;
   }
 
   setActiveArea(index: number) {
-    this.serviceAreas.forEach((area) => (area.active = false))
-    this.serviceAreas[index].active = true
-    this.currentIndex = index
+    this.serviceAreas.forEach((area) => (area.active = false));
+    this.serviceAreas[index].active = true;
+    this.currentIndex = index;
 
-    // Reset the timer when manually clicked
     if (this.cycleInterval) {
-      clearInterval(this.cycleInterval)
+      clearInterval(this.cycleInterval);
     }
-    this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000)
+    this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000);
   }
 
   onVideoError() {
-    this.videoError = true
+    console.error('Video error occurred');
+    this.videoError = true;
+    this.videoLoaded = false;
   }
 }
