@@ -221,8 +221,8 @@
   width: 75%;
   height: 100%;
   min-height: inherit;
-  overflow: hidden !important;
-  border-radius: 16px !important;
+  overflow: hidden;
+  border-radius: 16px;
   margin: 32px;
   background-color: #f0f0f0;
   transform-origin: center center;
@@ -245,19 +245,19 @@
   @media (max-width: 768px) {
     width: calc(100% - 32px);
     margin: 16px;
-    border-radius: 12px !important;
+    border-radius: 12px;
   }
   
   @media (max-width: 576px) {
     width: calc(100% - 24px);
     margin: 12px;
-    border-radius: 12px !important;
+    border-radius: 12px;
   }
   
   @media (max-width: 375px) {
     width: calc(100% - 16px);
     margin: 8px;
-    border-radius: 8px !important;
+    border-radius: 8px;
   }
 }
 
@@ -267,10 +267,14 @@
   object-fit: cover;
   transition: transform 0.8s ease;
   display: block;
-  border-radius: inherit; // Ensure image corners are rounded
+  border-radius: 16px;
   
   @media (max-width: 768px) {
-    height: calc(100% - 0px); // Make room for thumbnail at bottom
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 375px) {
+    border-radius: 8px;
   }
 }
 
@@ -284,7 +288,7 @@
   color: white;
   display: flex;
   align-items: flex-start;
-  border-radius: 16px 16px 0 0 !important;
+  border-radius: 16px 16px 0 0;
   
   @media (max-width: 1200px) {
     padding: 35px;
@@ -296,18 +300,18 @@
   
   @media (max-width: 768px) {
     padding: 25px;
-    border-radius: 12px 12px 0 0 !important;
+    border-radius: 12px 12px 0 0;
   }
   
   @media (max-width: 576px) {
     padding: 20px;
     flex-direction: column;
-    border-radius: 12px 12px 0 0 !important;
+    border-radius: 12px 12px 0 0;
   }
   
   @media (max-width: 375px) {
     padding: 15px;
-    border-radius: 8px 8px 0 0 !important;
+    border-radius: 8px 8px 0 0;
   }
 }
 
@@ -319,9 +323,8 @@
   padding: 40px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
   color: white;
-  border-radius: 0 0 16px 16px !important;
-  border-bottom-left-radius: inherit !important;
-  border-bottom-right-radius: inherit !important;
+  border-radius: 0 0 16px 16px;
+  z-index: 1;
   
   @media (max-width: 1200px) {
     padding: 35px;
@@ -333,17 +336,17 @@
   
   @media (max-width: 768px) {
     padding: 25px;
-    border-radius: 0 0 12px 12px !important;
+    border-radius: 0 0 12px 12px;
   }
   
   @media (max-width: 576px) {
     padding: 20px;
-    border-radius: 0 0 12px 12px !important;
+    border-radius: 0 0 12px 12px;
   }
   
   @media (max-width: 375px) {
     padding: 15px;
-    border-radius: 0 0 8px 8px !important;
+    border-radius: 0 0 8px 8px;
   }
 }
 

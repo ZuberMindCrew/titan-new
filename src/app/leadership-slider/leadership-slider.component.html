@@ -49,7 +49,7 @@
         </div>
         
         <div class="thumbnail-container" (click)="goToSlide(getNextIndex())" (touchend)="goToSlide(getNextIndex())">
-          <img [src]="slides[getNextIndex()].thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
+          <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
           <div class="thumbnail-overlay">
             <span class="next-indicator">{{getNextIndex() + 1}}—{{totalSlides}}</span>
             <span class="view-text">View Next</span>
