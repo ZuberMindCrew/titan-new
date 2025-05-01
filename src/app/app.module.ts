@@ -12,6 +12,7 @@ import { BrandsComponent } from './brands/brands.component';
 import { LeadershipSliderComponent } from './leadership-slider/leadership-slider.component';
 import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook.component';
 import { FiveSpecificComponent } from './five-specific/five-specific.component';
+import { SuccessStoriesComponent } from './success-stories/success-stories.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FiveSpecificComponent } from './five-specific/five-specific.component';
     BrandsComponent,
     LeadershipSliderComponent,
     StrategicOutlookComponent,
-    FiveSpecificComponent
+    FiveSpecificComponent,
+    SuccessStoriesComponent
   ],
   imports: [
     BrowserModule,

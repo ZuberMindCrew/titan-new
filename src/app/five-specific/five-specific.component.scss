@@ -10,7 +10,7 @@
     padding-bottom: 40px; // Added bottom spacing
     
     @media (max-width: 1440px) {
-      max-height: 700px;
+      max-height: 900px;
       min-height: 550px;
       padding-top: 55px;
     }
@@ -129,7 +129,7 @@
   .navigation-arrows {
     display: flex;
     gap: 16px;
-    padding-top: 70px; // Align with title
+    padding-top: 78px; // Align with title
     
     @media (max-width: 992px) {
       gap: 14px;
@@ -229,8 +229,8 @@
   .main-image-container {
     position: relative;
     width: 75%;
-    height: 100%;
-    min-height: inherit;
+    height: 98%;
+    // min-height: inherit;
     overflow: hidden;
     border-radius: 16px;
     margin: 32px;
@@ -256,27 +256,32 @@
     @media (max-width: 1200px) {
       width: 72%;
       margin: 28px;
+      height: 75%;
     }
     
     @media (max-width: 992px) {
       width: 70%;
       margin: 24px;
+      height: 75%;
     }
     
     @media (max-width: 768px) {
       width: calc(100% - 32px);
+      height: 75%;
       margin: 16px;
       border-radius: 12px;
     }
     
     @media (max-width: 576px) {
       width: calc(100% - 24px);
+      height: 75%;
       margin: 12px;
       border-radius: 12px;
     }
     
     @media (max-width: 375px) {
       width: calc(100% - 16px);
+      height: 75%;
       margin: 8px;
       border-radius: 8px;
     }
@@ -761,4 +766,11 @@
       font-size: 14px;
     }
   }
+  
+
+
+
+
+
+
   
