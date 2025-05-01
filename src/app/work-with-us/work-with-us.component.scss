@@ -101,6 +101,19 @@
     left: 0;
   }
   
+  // Add rounded corners to images
+  &:first-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+  
+  &:last-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+  
   @media (max-width: 992px) {
     width: 100%;
     height: 350px;
@@ -108,6 +121,19 @@
     
     img {
       position: absolute;
+    }
+    
+    // Adjust rounded corners for mobile
+    &:first-child {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    
+    &:last-child {
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
   }
   
@@ -194,7 +220,7 @@
   align-items: center;
   color: #ffffff;
   padding: 12px 24px;
-  border-radius: 4px;
+  border-radius: 50px; // Rounded button corners
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -210,10 +236,10 @@
   }
   
   &.schedule-now {
-    background-color: #001f3f; // Darker navy blue/black for second button
+    background: linear-gradient(90deg, #003366 0%, #0066cc 100%); // Gradient blue background
     
     &:hover {
-      background-color: #00152a; // Slightly darker on hover
+      background: linear-gradient(90deg, #002855 0%, #0055b3 100%); // Slightly darker gradient on hover
     }
   }
   
