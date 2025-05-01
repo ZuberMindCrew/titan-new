@@ -16,6 +16,7 @@ import { SuccessStoriesComponent } from './success-stories/success-stories.compo
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { WhyTitanComponent } from './why-titan/why-titan.component';
 import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
+import { ExecutiveForumComponent } from './executive-forum/executive-forum.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
     SuccessStoriesComponent,
     ServicesSectionComponent,
     WhyTitanComponent,
-    WorkWithUsComponent
+    WorkWithUsComponent,
+    ExecutiveForumComponent
   ],
   imports: [
     BrowserModule,
