@@ -11,6 +11,7 @@ import { FutureProofComponent } from './future-proof/future-proof.component';
 import { BrandsComponent } from './brands/brands.component';
 import { LeadershipSliderComponent } from './leadership-slider/leadership-slider.component';
 import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook.component';
+import { FiveSpecificComponent } from './five-specific/five-specific.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook
     FutureProofComponent,
     BrandsComponent,
     LeadershipSliderComponent,
-    StrategicOutlookComponent
+    StrategicOutlookComponent,
+    FiveSpecificComponent
   ],
   imports: [
     BrowserModule,
