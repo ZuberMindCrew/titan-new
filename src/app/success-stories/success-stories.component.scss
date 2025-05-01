@@ -44,11 +44,10 @@
 
 .statistics-container {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  gap: 0;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
+  position: relative;
 }
 
 .stat-circle {
@@ -61,13 +60,19 @@
   align-items: center;
   padding: 15px;
   text-align: center;
+  margin-left: -25px; /* Create overlap effect */
+  position: relative;
+  
+  &:first-child {
+    margin-left: 0; /* No margin for first item */
+  }
   
   &.gray {
-    background-color: #e9e9e9; // Light gray color
+    background-color: #e9e9e9; /* Light gray color */
   }
   
   &.beige {
-    background-color: #e6e0db; // Light beige color
+    background-color: #e6e0db; /* Light beige color */
   }
 }
 
@@ -80,7 +85,7 @@
 }
 
 .description {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
@@ -99,6 +104,7 @@
   .stat-circle {
     width: 160px;
     height: 160px;
+    margin-left: -20px;
   }
   
   .percentage {
@@ -128,18 +134,14 @@
     margin-bottom: 50px;
   }
   
-  .statistics-container {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
   .stat-circle {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
+    margin-left: -15px;
   }
   
   .percentage {
-    font-size: 36px;
+    font-size: 34px;
   }
   
   .description {
@@ -165,26 +167,23 @@
     margin-bottom: 40px;
   }
   
-  .statistics-container {
-    gap: 5px;
-  }
-  
   .stat-circle {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     padding: 10px;
+    margin-left: -12px;
   }
   
   .percentage {
-    font-size: 30px;
+    font-size: 28px;
   }
   
   .description {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .subtext {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -192,20 +191,20 @@
   .statistics-container {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
   }
   
   .stat-circle {
     width: 140px;
     height: 140px;
+    margin: 0 -15px 10px;
   }
   
   .percentage {
-    font-size: 36px;
+    font-size: 32px;
   }
   
   .description {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
@@ -230,12 +229,12 @@
   .statistics-container {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
   }
   
   .stat-circle {
     width: 160px;
     height: 160px;
+    margin: 0 0 15px;
   }
   
   .percentage {
