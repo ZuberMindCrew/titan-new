@@ -10,6 +10,7 @@ import { MediaBannerComponent } from './media-banner/media-banner.component';
 import { FutureProofComponent } from './future-proof/future-proof.component';
 import { BrandsComponent } from './brands/brands.component';
 import { LeadershipSliderComponent } from './leadership-slider/leadership-slider.component';
+import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LeadershipSliderComponent } from './leadership-slider/leadership-slider
     MediaBannerComponent,
     FutureProofComponent,
     BrandsComponent,
-    LeadershipSliderComponent
+    LeadershipSliderComponent,
+    StrategicOutlookComponent
   ],
   imports: [
     BrowserModule,

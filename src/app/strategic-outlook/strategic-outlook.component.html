@@ -1,0 +1,22 @@
+<section class="strategic-outlook">
+    <div class="container">
+      <h2 class="main-heading">Is Your Strategic Outlook Holding You Back?</h2>
+      <p class="subtitle">Many organizations struggle with</p>
+      
+      <div class="challenges-grid">
+        <div 
+          *ngFor="let challenge of challenges" 
+          class="challenge-card" 
+          [ngClass]="{'gray': challenge.variant === 'gray', 'beige': challenge.variant === 'beige'}">
+          <h3 class="challenge-title" style="font-size: 15px; font-weight: 600;">{{challenge.title}}</h3>
+          <p class="challenge-description" >{{challenge.description}}</p>
+        </div>
+      </div>
+      
+      <p class="solution-text">
+        We solve these challenges with proven transformational<br>
+        strategies and executional frameworks
+      </p>
+    </div>
+  </section>
+  
