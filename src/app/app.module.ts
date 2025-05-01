@@ -15,6 +15,7 @@ import { FiveSpecificComponent } from './five-specific/five-specific.component';
 import { SuccessStoriesComponent } from './success-stories/success-stories.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { WhyTitanComponent } from './why-titan/why-titan.component';
+import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WhyTitanComponent } from './why-titan/why-titan.component';
     FiveSpecificComponent,
     SuccessStoriesComponent,
     ServicesSectionComponent,
-    WhyTitanComponent
+    WhyTitanComponent,
+    WorkWithUsComponent
   ],
   imports: [
     BrowserModule,
