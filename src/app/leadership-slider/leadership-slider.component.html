@@ -1,9 +1,12 @@
 <div class="leadership-slider" #sliderContainer>
   <div class="header-section">
     <div class="title-section">
-      <h2 class="section-title">A Proven Track Record in  <br>Industry Leadership </h2> <br>
-      <div class="slide-counter">{{currentSlide + 1}}—{{totalSlides}}</div>
+      <h2 class="section-title">A Proven Track Record in Industry Leadership</h2>
     </div>
+  </div>
+  
+  <div class="counter-arrows-section">
+    <div class="slide-counter">{{currentSlide + 1}}—{{totalSlides}}</div>
     <div class="navigation-arrows">
       <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

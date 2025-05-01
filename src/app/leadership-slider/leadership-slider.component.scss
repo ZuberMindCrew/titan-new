@@ -6,54 +6,54 @@
     max-height: 800px;
     overflow: hidden;
     background-color: #e5efff;
-    padding-top: 60px; /* Add space for the controls at top */
+    padding-top: 30px; /* Reduced from 60px to 30px */
     padding-bottom: 40px; // Added bottom spacing
     
     @media (max-width: 1440px) {
       max-height: 900px;
       min-height: 550px;
-      padding-top: 55px;
+      padding-top: 25px; /* Reduced from 55px to 25px */
     }
     
     @media (max-width: 1200px) {
       max-height: 650px;
       min-height: 500px;
-      padding-top: 50px;
+      padding-top: 25px; /* Reduced from 50px to 25px */
     }
     
     @media (max-width: 992px) {
       max-height: 600px;
       min-height: 450px;
       height: 80vh;
-      padding-top: 45px;
+      padding-top: 25px; /* Reduced from 45px to 25px */
     }
     
     @media (max-width: 768px) {
       max-height: 550px;
       min-height: 400px;
       height: 70vh;
-      padding-top: 40px;
+      padding-top: 20px; /* Reduced from 40px to 20px */
     }
     
     @media (max-width: 576px) {
       max-height: 500px;
       min-height: 350px;
       height: 65vh;
-      padding-top: 35px;
+      padding-top: 15px; /* Reduced from 35px to 15px */
     }
     
     @media (max-width: 480px) {
       max-height: 450px;
       min-height: 300px;
       height: 60vh;
-      padding-top: 30px;
+      padding-top: 15px; /* Reduced from 30px to 15px */
     }
     
     @media (max-width: 375px) {
       max-height: 400px;
       min-height: 250px;
       height: 55vh;
-      padding-top: 25px;
+      padding-top: 15px; /* Reduced from 25px to 15px */
     }
   }
   
@@ -69,7 +69,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 32px;
-    margin-bottom: 40px;
+    margin-bottom: 5px; /* Reduced from 40px to 5px */
     width: 100%;
   }
   
@@ -87,49 +87,57 @@
     line-height: 1.2;
   }
   
-  .slide-counter {
-    font-size: 18px;
-    font-weight: 400;
-    color: black;
-  }
-  
-  .slider-controls {
-    position: absolute;
-    top: -50px; /* Position above the slider */
-    left: 0;
-    width: 100%;
+  .counter-arrows-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 32px;
-    z-index: 10;
-    margin-bottom: 40px;
-    
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+
     @media (max-width: 992px) {
-      padding: 0 24px;
-      top: -45px;
+      padding: 0 28px;
+      margin-top: 0;
+      margin-bottom: 16px;
     }
     
     @media (max-width: 768px) {
-      padding: 0 20px;
-      top: -40px;
+      padding: 0 24px;
+      margin-top: 0;
+      margin-bottom: 12px;
     }
     
-    @media (max-width: 480px) {
-      padding: 0 16px;
-      top: -30px;
+    @media (max-width: 576px) {
+      padding: 0 20px;
+      margin-top: 0;
+      margin-bottom: 10px;
     }
     
     @media (max-width: 375px) {
-      padding: 0 12px;
-      top: -25px;
+      padding: 0 16px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+  
+  .slide-counter {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+    
+    @media (max-width: 576px) {
+      font-size: 14px;
     }
   }
   
   .navigation-arrows {
     display: flex;
     gap: 16px;
-    padding-top: 78px; // Align with title
     
     @media (max-width: 992px) {
       gap: 14px;
@@ -137,12 +145,10 @@
     
     @media (max-width: 768px) {
       gap: 12px;
-      margin-top: 10px;
     }
     
     @media (max-width: 480px) {
       gap: 10px;
-      margin-top: -4px;
     }
     
     @media (max-width: 375px) {
@@ -756,7 +762,7 @@
   @media (max-width: 768px) {
     .header-section {
       padding: 0 20px;
-      margin-bottom: 30px;
+      margin-bottom: 5px; /* Reduced from 30px to 5px */
     }
 
     .section-title {
@@ -771,7 +777,7 @@
   @media (max-width: 576px) {
     .header-section {
       padding: 0 16px;
-      margin-bottom: 25px;
+      margin-bottom: 5px; /* Reduced from 25px to 5px */
     }
 
     .section-title {
