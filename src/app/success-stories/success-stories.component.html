@@ -1,1 +1,25 @@
-<p>success-stories works!</p>
+<section class="success-stories">
+    <div class="container">
+      <h2 class="main-heading">Most companies miss the mark before working with us:</h2>
+      
+      <div class="quote-container">
+        <p class="quote">"Only 1 in 4 employees understands how their work drives financial outcomes."</p>
+      </div>
+      
+      <h3 class="sub-heading">Just Some of Our Success Stories</h3>
+      
+      <div class="statistics-container">
+        <div 
+          *ngFor="let stat of statistics" 
+          class="stat-circle" 
+          [ngClass]="{'gray': stat.variant === 'gray', 'beige': stat.variant === 'beige'}">
+          <div class="percentage">{{stat.percentage}}</div>
+          <div class="description">
+            {{stat.description}}
+            <span *ngIf="stat.subtext" class="subtext"><br>{{stat.subtext}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
