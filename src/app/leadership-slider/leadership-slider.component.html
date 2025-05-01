@@ -1,29 +1,24 @@
-<div class="leadership-slider" #sliderContainer  >
-  <br>
-  <div class="slider-content" >
-    <div class="slider-controls">
-      <!-- Slide counter -->
-       
-      <div class="slide-counter">
-        {{currentSlide + 1}}—{{totalSlides}}
-      </div>
-      
-      <!-- Navigation arrows -->
-      <div class="navigation-arrows">
-        <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="nav-arrow next" (click)="nextSlide()" aria-label="Next slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
+<div class="leadership-slider" #sliderContainer>
+  <div class="header-section">
+    <div class="title-section">
+      <h2 class="section-title">A Proven Track Record in  <br>Industry Leadership </h2> <br>
+      <div class="slide-counter">{{currentSlide + 1}}—{{totalSlides}}</div>
     </div>
-    
-    <!-- Slides -->
+    <div class="navigation-arrows">
+      <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="nav-arrow next" (click)="nextSlide()" aria-label="Next slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="slider-content">
     <div class="slides-container">
       <div 
         *ngFor="let slide of slides; let i = index" 
@@ -34,7 +29,7 @@
         [style.transform]="'translateX(' + ((i - currentSlide) * 100) + '%)'">
         
         <div class="main-image-container">
-          <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image" >
+          <img [src]="slide.mainImage" [alt]="slide.title || 'Project image'" class="main-image">
           
           <!-- Top overlay for slide number and title -->
           <div class="image-top-overlay">
@@ -45,7 +40,7 @@
           </div>
           
           <!-- Bottom overlay for description only -->
-          <div class="image-bottom-overlay" >
+          <div class="image-bottom-overlay">
             <p class="slide-description">{{slide.description}}</p>
           </div>
         </div>
