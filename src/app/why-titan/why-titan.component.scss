@@ -146,7 +146,7 @@
   }
   
   .cards-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
   
@@ -184,6 +184,10 @@
   .card-image {
     height: 180px;
   }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -215,5 +219,9 @@
   .feature-list li {
     font-size: 14px;
     margin-bottom: 12px;
+  }
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
