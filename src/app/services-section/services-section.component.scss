@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.services-section {
+  background-color: #f0f5ff; // Light blue background
+  padding: 80px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.card-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d3c2d; // Dark green color for the first card
+  margin-bottom: 20px;
+  line-height: 1.3;
+  
+  .service-card:nth-child(2) & {
+    color: #1a1a4b; // Dark blue color for the second card
+  }
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 20px;
+  
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2c5282; // Dark blue button
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
+  
+  &:hover {
+    background-color: #1e3a5f;
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive styles
+@media (max-width: 1200px) {
+  .card-title {
+    font-size: 24px;
+  }
+  
+  .card-text {
+    font-size: 15px;
+  }
+  
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 250px;
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    
+    &:last-of-type {
+      margin-bottom: 25px;
+    }
+  }
+  
+  .cta-button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 0;
+  }
+  
+  .card-image {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}

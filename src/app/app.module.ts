@@ -13,6 +13,7 @@ import { LeadershipSliderComponent } from './leadership-slider/leadership-slider
 import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook.component';
 import { FiveSpecificComponent } from './five-specific/five-specific.component';
 import { SuccessStoriesComponent } from './success-stories/success-stories.component';
+import { ServicesSectionComponent } from './services-section/services-section.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SuccessStoriesComponent } from './success-stories/success-stories.compo
     LeadershipSliderComponent,
     StrategicOutlookComponent,
     FiveSpecificComponent,
-    SuccessStoriesComponent
+    SuccessStoriesComponent,
+    ServicesSectionComponent
   ],
   imports: [
     BrowserModule,
