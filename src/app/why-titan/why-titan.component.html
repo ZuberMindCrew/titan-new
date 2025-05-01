@@ -1,0 +1,62 @@
+<section class="why-titan-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Titan Edge Advisory?</h2>
+        <p class="section-subtitle">
+          We don't just advise—we execute strategy to deliver global<br>
+          measurable results across 30+ industries.
+        </p>
+      </div>
+      
+      <div class="cards-container">
+        <!-- Global Business Development Card -->
+        <div class="info-card">
+          <div class="card-image">
+            <img src="assets/my1.png" alt="Global business network visualization">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Global Business Development</h3>
+            
+            <ul class="feature-list">
+              <li *ngFor="let region of globalBusinessRegions">
+                <span class="arrow">→</span> {{region}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Core Expertise Card -->
+        <div class="info-card">
+          <div class="card-image">
+            <img src="assets/my2.jpg" alt="Classical pillars representing core expertise">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Our Core Expertise</h3>
+            
+            <ul class="feature-list">
+              <li *ngFor="let expertise of coreExpertise">
+                <span class="arrow">→</span> {{expertise}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Industries Card -->
+        <div class="info-card">
+          <div class="card-image">
+            <img src="assets/my3.png" alt="Business documents with charts and graphs">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Experience Spanning<br>( 30+ Industries)</h3>
+            
+            <ul class="feature-list">
+              <li *ngFor="let industry of industries">
+                <span class="arrow">→</span> {{industry}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

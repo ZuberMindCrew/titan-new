@@ -14,6 +14,7 @@ import { StrategicOutlookComponent } from './strategic-outlook/strategic-outlook
 import { FiveSpecificComponent } from './five-specific/five-specific.component';
 import { SuccessStoriesComponent } from './success-stories/success-stories.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
+import { WhyTitanComponent } from './why-titan/why-titan.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ServicesSectionComponent } from './services-section/services-section.co
     StrategicOutlookComponent,
     FiveSpecificComponent,
     SuccessStoriesComponent,
-    ServicesSectionComponent
+    ServicesSectionComponent,
+    WhyTitanComponent
   ],
   imports: [
     BrowserModule,
