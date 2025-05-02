@@ -19,6 +19,7 @@ import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 import { ExecutiveForumComponent } from './executive-forum/executive-forum.component';
 import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     WorkWithUsComponent,
     ExecutiveForumComponent,
     HeroBannerComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
