@@ -15,10 +15,10 @@ interface ServiceArea {
 export class HeroComponent implements OnInit, OnDestroy {
   serviceAreas: ServiceArea[] = [
     { index: 0, number: "01.", title: "C-Suite Alignment", active: false },
-    { index: 1, number: "02.", title: "Market Expansion", active: false },
-    { index: 2, number: "03.", title: "Change Management", active: false },
-    { index: 3, number: "04.", title: "Communications", active: true }, // Set Communications as active
-    { index: 4, number: "05.", title: "Organizational Performance", active: false },
+    { index: 1, number: "02.", title: "Impact Communications", active: false },
+    { index: 2, number: "03.", title: "High Performance", active: false },
+    { index: 3, number: "04.", title: "Market Expansion", active: true }, // Set Communications as active
+    { index: 4, number: "05.", title: "Transformation", active: false },
   ]
 
   currentIndex = 3 // Start with Communications active (index 3)
