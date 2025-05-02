@@ -97,18 +97,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #001f3f;
+  background: linear-gradient(90deg, #001428 0%, #0066cc 100%);
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   min-width: 200px;
   
   &:hover {
-    background-color: #00152a;
+    background: linear-gradient(90deg, #000d19 0%, #0055b3 100%);
   }
   
   .arrow-icon {
