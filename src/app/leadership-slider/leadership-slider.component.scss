@@ -123,7 +123,7 @@
 
 .slide-counter {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   color: black;
   
   @media (max-width: 768px) {
@@ -214,7 +214,7 @@
   height: 92%;
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
-  opacity: 0;
+  opacity: 1;
   transform: scale(0.4);
   
   &.active {
