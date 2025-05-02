@@ -194,17 +194,17 @@
   }
   
   .stat-circle {
-    width: 140px;
-    height: 140px;
-    margin: 0 -15px 10px;
+    width: 110px;
+    height: 110px;
+    margin: 0 -8px 10px;
   }
   
   .percentage {
-    font-size: 32px;
+    font-size: 28px;
   }
   
   .description {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
@@ -227,21 +227,45 @@
   }
 
   .statistics-container {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
   }
   
   .stat-circle {
-    width: 160px;
-    height: 160px;
-    margin: 0 0 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0 -6px -19px;
+    padding: 8px;
   }
   
   .percentage {
-    font-size: 34px;
+    font-size: 23px;
   }
   
   .description {
-    font-size: 12px;
+    font-size: 7px;
+  }
+
+  .subtext {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .stat-circle {
+    width: 90px;
+    height: 90px;
+    margin: 0 -10px -19px;
+    padding: 6px;
+  }
+  
+  .percentage {
+    font-size: 22px;
+  }
+  
+  .description {
+    font-size: 7px;
   }
 }
