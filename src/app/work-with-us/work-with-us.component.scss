@@ -228,7 +228,7 @@
   align-self: flex-start;
   
   &.strategy-call {
-    background-color: #004080; // Dark blue button for first button
+    background-color: #025191; // Dark blue button for first button
     
     &:hover {
       background-color: #003366; // Slightly darker blue on hover
@@ -236,10 +236,10 @@
   }
   
   &.schedule-now {
-    background: linear-gradient(90deg, #003366 0%, #0066cc 100%); // Gradient blue background
+    background: linear-gradient(90deg, #000000 1%, #025191 100%);
     
     &:hover {
-      background: linear-gradient(90deg, #002855 0%, #0055b3 100%); // Slightly darker gradient on hover
+      background: linear-gradient(90deg, #000000 20%, #025191 100%);
     }
   }
   
