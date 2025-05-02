@@ -21,6 +21,7 @@ import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { ProfileSectionComponent } from './profile-section/profile-section.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AboutComponent } from './about/about.component';
     HeroBannerComponent,
     HomeComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ProfileSectionComponent
   ],
   imports: [
     BrowserModule,
