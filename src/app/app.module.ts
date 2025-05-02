@@ -17,6 +17,8 @@ import { ServicesSectionComponent } from './services-section/services-section.co
 import { WhyTitanComponent } from './why-titan/why-titan.component';
 import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 import { ExecutiveForumComponent } from './executive-forum/executive-forum.component';
+import { HeroBannerComponent } from './hero-banner/hero-banner.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ExecutiveForumComponent } from './executive-forum/executive-forum.compo
     ServicesSectionComponent,
     WhyTitanComponent,
     WorkWithUsComponent,
-    ExecutiveForumComponent
+    ExecutiveForumComponent,
+    HeroBannerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
