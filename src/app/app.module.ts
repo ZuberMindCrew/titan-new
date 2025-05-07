@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { TeamSectionComponent } from './team-section/team-section.component';
+import { AdvisorsSectionComponent } from './advisors-section/advisors-section.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { TeamSectionComponent } from './team-section/team-section.component';
     FooterComponent,
     AboutComponent,
     ProfileSectionComponent,
-    TeamSectionComponent
+    TeamSectionComponent,
+    AdvisorsSectionComponent
   ],
   imports: [
     BrowserModule,
