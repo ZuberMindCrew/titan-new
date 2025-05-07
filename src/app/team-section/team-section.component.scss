@@ -44,16 +44,28 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
+  .image-wrapper {
+    padding: 15px 15px 0; /* Add padding around the image */
+  }
+  
   .image-container {
     width: 100%;
-    height: 290px;
+    padding-top: 100%; /* This creates a square aspect ratio */
+    position: relative;
     overflow: hidden;
     margin-bottom: 20px;
+    border-radius: 12px; /* Rounded corners for the image */
   }
   
   .image-container img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    right: 19px;
+    bottom: 19px;
+    width: 92%;
+    border-radius: 12px;
+    height: 96%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
@@ -93,10 +105,6 @@
       gap: 25px;
     }
     
-    .image-container {
-      height: 260px;
-    }
-    
     .team-card h3 {
       font-size: 20px;
     }
@@ -116,10 +124,6 @@
       font-size: 32px;
       margin-bottom: 40px;
     }
-    
-    .image-container {
-      height: 300px;
-    }
   }
   
   @media (max-width: 480px) {
@@ -134,10 +138,6 @@
     .team-section h2 {
       font-size: 28px;
       margin-bottom: 30px;
-    }
-    
-    .image-container {
-      height: 250px;
     }
     
     .team-card h3 {
