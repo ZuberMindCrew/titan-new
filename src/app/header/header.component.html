@@ -5,7 +5,7 @@
     <ul class="nav-links">
       <div class="vertical-divider"></div>
       <li><a routerLink="/about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
+      <li><a routerLink="/service">Services</a></li>
       <li><a href="#case-studies">Case Studies</a></li>
       <li><a href="#contact">Contact Us</a></li>
     </ul>
@@ -20,7 +20,7 @@
   <div class="mobile-menu" [ngClass]="{'active': isMobileMenuOpen}">
     <button class="mobile-menu-close" (click)="closeMobileMenu()" aria-label="Close menu">&times;</button>
     <a routerLink="/about" (click)="closeMobileMenu()">About Us</a>
-    <a href="#services" (click)="closeMobileMenu()">Services</a>
+    <a routerLink="/service" (click)="closeMobileMenu()">Services</a>
     <a href="#case-studies" (click)="closeMobileMenu()">Case Studies</a>
     <a href="#contact" (click)="closeMobileMenu()">Contact Us</a>
     <a href="#schedule" class="mobile-cta" (click)="closeMobileMenu()">SCHEDULE A STRATEGY SESSION</a>

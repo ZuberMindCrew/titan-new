@@ -24,6 +24,8 @@ import { AboutComponent } from './about/about.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
 import { TeamSectionComponent } from './team-section/team-section.component';
 import { AdvisorsSectionComponent } from './advisors-section/advisors-section.component';
+import { ServiceComponent } from './service/service.component';
+import { ServicesSectionServiceComponent } from './services-section-service/services-section-service.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AdvisorsSectionComponent } from './advisors-section/advisors-section.co
     AboutComponent,
     ProfileSectionComponent,
     TeamSectionComponent,
-    AdvisorsSectionComponent
+    AdvisorsSectionComponent,
+    ServiceComponent,
+    ServicesSectionServiceComponent
   ],
   imports: [
     BrowserModule,
