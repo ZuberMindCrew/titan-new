@@ -124,7 +124,7 @@
 .slide-counter {
   font-size: 36px;
   font-weight: 400;
-  color: black;
+  color: #0C0C3C;
   
   @media (max-width: 768px) {
     font-size: 16px;
@@ -166,7 +166,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000; /* Black color for better visibility */
+  color: #0C0C3C; /* Black color for better visibility */
   transition: all 0.3s ease;
   
   &:hover {
