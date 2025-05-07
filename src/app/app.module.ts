@@ -27,6 +27,8 @@ import { AdvisorsSectionComponent } from './advisors-section/advisors-section.co
 import { ServiceComponent } from './service/service.component';
 import { ServicesSectionServiceComponent } from './services-section-service/services-section-service.component';
 import { ProcessSectionComponent } from './process-section/process-section.component';
+import { TermsComponent } from './terms/terms.component';
+import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { ProcessSectionComponent } from './process-section/process-section.compo
     AdvisorsSectionComponent,
     ServiceComponent,
     ServicesSectionServiceComponent,
-    ProcessSectionComponent
+    ProcessSectionComponent,
+    TermsComponent,
+    TermsPolicyComponent
   ],
   imports: [
     BrowserModule,
