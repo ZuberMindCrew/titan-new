@@ -25,6 +25,7 @@ header {
     gap: 32px;
     margin-left: 40px;
     flex-wrap: nowrap;
+
   }
   
   .nav-links li {
@@ -32,6 +33,7 @@ header {
   }
   
   .nav-links a {
+    font-family: 'manrope', sans-serif;
     color: white;
     text-decoration: none;
     font-weight: 400;
@@ -40,6 +42,7 @@ header {
     position: relative;
     padding: 4px 0;
     white-space: nowrap;
+    letter-spacing: 0.7px;
   }
   
   .nav-links a::after {
