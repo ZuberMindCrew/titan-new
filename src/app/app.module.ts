@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ProfileSectionComponent } from './profile-section/profile-section.component';
+import { TeamSectionComponent } from './team-section/team-section.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProfileSectionComponent } from './profile-section/profile-section.compo
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    ProfileSectionComponent
+    ProfileSectionComponent,
+    TeamSectionComponent
   ],
   imports: [
     BrowserModule,
