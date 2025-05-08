@@ -13,7 +13,7 @@ body {
     padding: 2rem;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    // box-shadow: 0 2px 16px rgba(0,0,0,0.04);
   }
   
   h1 {
@@ -49,10 +49,10 @@ body {
   }
   
   .emphasis {
-    font-weight: 700;
-    color: #222;
-    background: #f7f7f7;
-    padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    color: #525257;
+    // background: #f7f7f7;
+    // padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2vw, 1.5rem);
     border-radius: 6px;
     margin: clamp(1.5rem, 3vw, 2rem) 0;
     display: block;
