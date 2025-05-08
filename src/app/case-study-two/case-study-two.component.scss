@@ -1,0 +1,153 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #111111;
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
+  
+  /* Header/Navigation */
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    z-index: 10;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    opacity: 0.8;
+  }
+  
+  .cta-button {
+    margin-left: 20px;
+  }
+  
+  .schedule-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .schedule-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 800px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header {
+      padding: 20px;
+    }
+    
+    .main-nav ul {
+      gap: 15px;
+    }
+    
+    .hero-content {
+      left: 20px;
+    }
+    
+    .hero-content h1 {
+      font-size: 28px;
+    }
+    
+    .hero-content p {
+      font-size: 14px;
+    }
+    
+    .schedule-btn {
+      padding: 8px 15px;
+      font-size: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main-nav {
+      display: none;
+    }
+    
+    .hero-content h1 {
+      font-size: 24px;
+    }
+  }
