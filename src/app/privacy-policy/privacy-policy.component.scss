@@ -13,7 +13,7 @@ body {
     padding: 2rem;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    // box-shadow: 0 2px 16px rgba(0,0,0,0.04);
   }
   
   h1 {
@@ -35,8 +35,10 @@ body {
   
   p, ul, li {
     font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 500;
     line-height: 1.7;
     margin-bottom: 1.2rem;
+    color:#525257;
   }
   
   ul {
