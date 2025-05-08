@@ -26,7 +26,7 @@ export class FiveSpecificComponent {
   @ViewChild("sliderContainer") sliderContainer!: ElementRef
 
   currentSlide = 0
-  totalSlides = 4
+  totalSlides = 3
   isAnimating = false
   isTouchDevice = false
   imagesLoaded = false
@@ -36,34 +36,27 @@ export class FiveSpecificComponent {
       id: 1,
       mainImage: "./assets/blurredpeople.jpg",
       thumbnailImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
-      title: "Enterprise P&L & Capital Leadership",
+      title: " Global Reorganization",
       description:
-        "Former Managing Director at Bank of America Merrill Lynch, Citigroup, and AEGON NV — managing $500M+ in revenue and $16B+ in liquidity, driving global financial performance across banking and capital markets.",
+        "“We’re in the middle of a global reorg across five regions, and it’s beyond messy. Leadership isn't aligned, priorities keep shifting, and we’re losing time—and trust—internally.”",
     },
     {
       id: 2,
       mainImage: "./assets/StructureChallenges.jpg",
       thumbnailImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
-      title: "Strategic Advisory & Consulting",
+      title: "Scaling w/o Stability",
       description:
-        "Led transformational initiatives for Fortune 500 companies, delivering strategic growth plans and operational excellence frameworks that resulted in 30%+ efficiency improvements and $200M+ in cost savings.",
+        "“We’re scaling fast—but honestly, it’s starting to break us. We’ve got leadership drag, skill gaps, and too many missed handoffs. We should be accelerating, not cleaning up.”",
     },
     {
       id: 3,
       mainImage: "./assets/TrainonTrack.jpg",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
-      title: "Organizational Development",
+      title: "Merger Without Momentum",
       description:
-        "Specialized in executive leadership development and C-suite alignment, building high-performance teams and implementing change management strategies that accelerated growth and innovation.",
+        "“We just expanded into a new region, but we seem to be dead in the water. The market’s confused, our teams aren’t synced, and our competitors already saw the gap.”",
     },
-    {
-      id: 4,
-      mainImage: "./assets/SkyPillars.jpg",
-      thumbnailImage: "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
-      title: "Capital Advisory & Leadership Acceleration",
-      description:
-        "CEO & Founder of Titan Edge Advisory, since 2016, recognized by Forbes Council. Co-founded an impact investment firm and built strategic executive programs that drive exponential leadership growth and capital efficiency across high-growth businesses.",
-    },
+
   ];
 
   constructor(
