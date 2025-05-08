@@ -1,3 +1,7 @@
+ /* Import Google Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+  
+
 .brands-section {
     padding: 38px 0;
     background-color: #fff;
@@ -7,18 +11,29 @@
   .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 40px;
+    // padding: 0 40px;
+    padding: 0 10px;
   }
   
-  h2 {
+  // h2 {
+  //   text-align: center;
+  //   font-size: 24px;
+  //   font-weight: 700;
+  //   color: #0F0C29;
+  //   margin-bottom: 60px;
+  //   font-family: 'Montserrat', sans-serif;
+  // }
+
+  .container h2{
     text-align: center;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     color: #0F0C29;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-family: 'Montserrat', sans-serif;
   }
-  
+
+
   .logos-container {
     width: 100%;
     overflow: hidden;

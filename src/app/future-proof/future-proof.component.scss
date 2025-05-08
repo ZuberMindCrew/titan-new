@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 .future-proof-section {
-  background-color: #FFFFFF;
+  // background-color: #FFFFFF;
+  background-color: #F9F7F6;
   padding: 120px 0;
   width: 100%;
 }
@@ -7,14 +10,18 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+   padding: 0px 10px;
+  //padding: 0px 40px;
 }
 
 .content-wrapper {
   display: flex;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
   gap: 80px;
   position: relative; /* Added to establish positioning context */
+ 
+  margin-top: 0px;
 }
 
 .text-content {
@@ -22,29 +29,43 @@
   padding-top: 8px;
 }
 
-h2 {
-  font-size: 38px;
+// h2 {
+//   font-size: 38px;
+//   line-height: 1.2;
+//   color: #0C0C3C;
+//   font-weight: 600;
+//   margin-top: 0;
+//   margin-bottom: 40px;
+//   font-family: 'Montserrat', sans-serif;
+//   letter-spacing: -0.5px;
+// }
+
+.text-content h2 {
+  font-size: 54px;
   line-height: 1.2;
   color: #0C0C3C;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Outfit", sans-serif;
   letter-spacing: -0.5px;
 }
 
 .intro-text, .expertise-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #525257;
   margin-bottom: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
 }
 
 .company-name {
+  font-family: 'Outfit', sans-serif;
   color: #2E557D;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .highlight {
@@ -60,8 +81,8 @@ h2 {
   position: relative;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-  margin-top: -60px; /* Shifted up by adding negative margin at top */
-  margin-bottom: 60px; /* Added space at bottom to push it up */
+  // margin-top: -60px; /* Shifted up by adding negative margin at top */
+  // margin-bottom: 60px; /* Added space at bottom to push it up */
   max-width: 450px;
   align-self: flex-start; /* Ensures the container stays at the top */
   

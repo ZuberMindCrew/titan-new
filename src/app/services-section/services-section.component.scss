@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
 
 .services-section {
   background-color: #f0f7ff; // Very light blue background
@@ -72,7 +74,8 @@
 }
 
 .card-title {
-  font-size: 26px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
   font-weight: 600;
   color: #2d3c2d; // Dark green color for the first card
   margin-bottom: 20px;

@@ -34,7 +34,7 @@ export class FiveSpecificComponent {
   slides: SlideItem[] = [
     {
       id: 1,
-      mainImage: "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
+      mainImage: "./assets/blurredpeople.jpg",
       thumbnailImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
       title: "Enterprise P&L & Capital Leadership",
       description:
@@ -42,7 +42,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 2,
-      mainImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
+      mainImage: "./assets/StructureChallenges.jpg",
       thumbnailImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
       title: "Strategic Advisory & Consulting",
       description:
@@ -50,7 +50,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 3,
-      mainImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
+      mainImage: "./assets/TrainonTrack.jpg",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       title: "Organizational Development",
       description:
@@ -58,7 +58,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 4,
-      mainImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
+      mainImage: "./assets/SkyPillars.jpg",
       thumbnailImage: "https://framerusercontent.com/images/oignU66RoHJ7hueHSR0axLviGY.jpg?scale-down-to=2048",
       title: "Capital Advisory & Leadership Acceleration",
       description:
