@@ -31,6 +31,7 @@ import { TermsComponent } from './terms/terms.component';
 import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
 import { CaseStudyComponent } from './case-study/case-study.component';
 import { ContactComponent } from './contact/contact.component';
+import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ContactComponent } from './contact/contact.component';
     TermsComponent,
     TermsPolicyComponent,
     CaseStudyComponent,
-    ContactComponent
+    ContactComponent,
+    CaseStudyTwoComponent
   ],
   imports: [
     BrowserModule,
