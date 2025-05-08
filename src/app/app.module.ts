@@ -29,6 +29,8 @@ import { ServicesSectionServiceComponent } from './services-section-service/serv
 import { ProcessSectionComponent } from './process-section/process-section.component';
 import { TermsComponent } from './terms/terms.component';
 import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
+import { CaseStudyComponent } from './case-study/case-study.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
     ServicesSectionServiceComponent,
     ProcessSectionComponent,
     TermsComponent,
-    TermsPolicyComponent
+    TermsPolicyComponent,
+    CaseStudyComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
