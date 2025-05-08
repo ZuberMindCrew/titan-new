@@ -7,7 +7,7 @@
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -24,9 +24,9 @@
 }
 
 .hero-image {
-  width: 1000px;
+  width: 100%;
   height: 500px;
-  margin-left: 100px;
+  // margin-left: 100px;
   margin-bottom: 50px;
   border-radius: 16px;
   overflow: hidden;
@@ -161,16 +161,16 @@
     max-width: 320px;
   }
   .hero-image {
-    width: 90%;
+    width: 100%;
     height: 200px;
-    margin-right: 400px;
+    // margin-right: 400px;
     margin-bottom: 50px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
   .hero-image img {
-    width: 90%;
+    width: 100%;
     height: 200px;
     display: block;
     object-fit: cover;
@@ -209,5 +209,18 @@
   .strategy-button {
     font-size: 14px;
     padding: 12px 20px;
+  }
+  .hero-image {
+    margin-bottom: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
 }
