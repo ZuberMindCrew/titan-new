@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 .profile-section {
-  background-color: #f8f8fa;
+  background-color: #F9F7F6;
   padding: 80px 20px;
   font-family: 'Montserrat', sans-serif;
   
@@ -15,7 +15,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -59,11 +59,12 @@
 }
 
 .profile-name {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 54px;
+  font-weight: 500;
   color: #0C0C3C;
   margin: 0 0 16px;
   line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 32px;
@@ -75,9 +76,10 @@
 }
 
 .profile-titles {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   color: #0C0C3C;
+  text-align: left;
   margin: 0 0 24px;
   line-height: 1.5;
   font-family: 'Outfit', sans-serif;
@@ -88,11 +90,12 @@
 
 .profile-bio {
   p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    color: #0C0C3C;
+    color: #525257;
     line-height: 1.6;
     margin: 0 0 20px;
+    font-family: 'Outfit', sans-serif;
     
     @media (max-width: 768px) {
       font-size: 15px;
@@ -109,7 +112,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #004080;
+  background-color: #025191;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -118,6 +121,8 @@
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-top: 10px;
+  font-family: 'Inter', sans-serif;
+
   
   &:hover {
     background-color: #003366;
