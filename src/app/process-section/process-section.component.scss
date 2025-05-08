@@ -4,7 +4,7 @@
 
 .process-section {
   background-color: #FFFFFF;
-  padding: 80px 0;
+  padding: 0px 0px 80px 0px;
   width: 100%;
 }
 
@@ -30,16 +30,18 @@
   height: 500px;
   // margin-left: 100px;
   margin-bottom: 50px;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 20px;
+  // overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 500px;
   display: block;
   object-fit: cover;
+  border-radius: 20px;
+
 }
 
 .process-steps {
@@ -47,6 +49,7 @@
   justify-content: space-between;
   gap: 10px;
   margin-top: 50px;
+  // display: none;
 }
 
 .process-step {
@@ -76,8 +79,8 @@
 }
 
 .process-step h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   color: #0C0C3C;
   margin: 0;
   font-family: 'Outfit', sans-serif;
