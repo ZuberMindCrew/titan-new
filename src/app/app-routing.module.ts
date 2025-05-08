@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -23,7 +24,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
