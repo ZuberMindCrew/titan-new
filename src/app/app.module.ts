@@ -32,6 +32,8 @@ import { TermsPolicyComponent } from './terms-policy/terms-policy.component';
 import { CaseStudyComponent } from './case-study/case-study.component';
 import { ContactComponent } from './contact/contact.component';
 import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component
     TermsPolicyComponent,
     CaseStudyComponent,
     ContactComponent,
-    CaseStudyTwoComponent
+    CaseStudyTwoComponent,
+    PrivacyComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
