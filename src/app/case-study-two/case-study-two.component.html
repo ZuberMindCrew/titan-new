@@ -1,34 +1,30 @@
-<section class="hero">
+<section class="hero" *ngIf="caseStudy">
   <div class="hero-content">
-    <h1>Global Financial Services Client</h1>
-    <p>$3T+ in assets | Serving $50M–$2B middle-market companies</p>
+    <h1>{{caseStudy.title}}</h1>
+    <p>{{caseStudy.subtitle}}</p>
     <div class="hero-image">
-      <img
-        src="assets/changemgmt.jpg"
-        alt="Team meeting discussing change management strategy"
-      />
+      <img [src]="caseStudy.heroImage" [alt]="caseStudy.title" />
     </div>
   </div>
 </section>
 
-<div class="case-study-container">
+<div class="case-study-container" *ngIf="caseStudy">
   <!-- Header -->
   <div class="header">
-    <h1 class="main-title">From Underperformance to Global Powerhouse:</h1>
-    <h2 class="subtitle">Tripling Revenue & Slashing Costs in 16 months</h2>
+    <h1 class="main-title">{{caseStudy.title}}</h1>
+    <h2 class="subtitle">{{caseStudy.subtitle}}</h2>
   </div>
 
   <!-- Key Metrics -->
   <div class="metrics-container">
     <div class="metric-circle">
-      <span class="metric-value">3X</span>
-      <span class="metric-label">Revenue</span>
+      <span class="metric-value">{{caseStudy.metrics.primary.value}}</span>
+      <span class="metric-label">{{caseStudy.metrics.primary.label}}</span>
     </div>
     <div class="metric-circle">
-      <span class="metric-value">23%</span>
+      <span class="metric-value">{{caseStudy.metrics.secondary.value}}</span>
       <div class="metric-label-group">
-        <span class="metric-label">Expense</span>
-        <span class="metric-label">Reduction</span>
+        <span class="metric-label">{{caseStudy.metrics.secondary.label}}</span>
       </div>
     </div>
   </div>
@@ -38,25 +34,9 @@
     <div class="section overview-section">
       <h2 class="section-title">Client Overview</h2>
       <ul class="bullet-list">
-        <li class="bullet-item">
+        <li class="bullet-item" *ngFor="let item of caseStudy.clientOverview">
           <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >$3T in assets, serving middle-market companies ($50M-$2B
-            revenue).</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Leading provider of lending, treasury management, and liquidity
-            solutions.</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Skill gaps across teams slowing execution</span
-          >
+          <span class="bullet-text">{{item}}</span>
         </li>
       </ul>
     </div>
@@ -65,24 +45,9 @@
     <div class="section challenge-section">
       <h2 class="section-title">The Challenge</h2>
       <ul class="bullet-list">
-        <li class="bullet-item">
+        <li class="bullet-item" *ngFor="let item of caseStudy.challenges">
           <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Fragmented business development and declining portfolio
-            performance.</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Leadership misalignment and poor communication.</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Skill gaps across teams slowing execution</span
-          >
+          <span class="bullet-text">{{item}}</span>
         </li>
       </ul>
     </div>
@@ -91,24 +56,9 @@
     <div class="section action-section">
       <h2 class="section-title">What We Did</h2>
       <ul class="bullet-list">
-        <li class="bullet-item">
+        <li class="bullet-item" *ngFor="let item of caseStudy.actions">
           <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Reorganized leadership structure for clarity and alignment.</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Overhauled pricing strategy to drive profitability</span
-          >
-        </li>
-        <li class="bullet-item">
-          <span class="bullet-point"></span>
-          <span class="bullet-text"
-            >Launched a national onboarding program to upskill teams and boost
-            execution</span
-          >
+          <span class="bullet-text">{{item}}</span>
         </li>
       </ul>
     </div>
@@ -117,40 +67,9 @@
     <div class="section result-section">
       <h2 class="section-title">The Result</h2>
       <div class="result-cards">
-        <div class="result-card">
-          <span class="result-percentage">23%</span>
-          <span class="result-description"
-            >reduction in expenses with greater efficiency
-          </span>
-        </div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card">
-          <span class="result-percentage">3X</span>
-          <span class="result-description">revenue growth year-over-year</span>
-        </div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card">
-          <span class="result-description"
-            >Liquidity profitability improved by
-            <span class="result-percentage">1k+ bps</span>
-          </span>
-        </div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card">
-          <span class="result-description"
-            >Division became #1 globally, outperforming three regions
-            combined</span
-          >
-        </div>
-      </div>
-      <div class="result-cards">
-        <div class="result-card">
-          <span class="result-description"
-            >Created sustained growth with engaged, high-performing teams</span
-          >
+        <div class="result-card" *ngFor="let result of caseStudy.results">
+          <span class="result-percentage">{{result.percentage}}</span>
+          <span class="result-description">{{result.description}}</span>
         </div>
       </div>
     </div>
