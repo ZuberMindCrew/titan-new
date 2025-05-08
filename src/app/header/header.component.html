@@ -7,7 +7,7 @@
       <li><a routerLink="/about">About Us</a></li>
       <li><a routerLink="/service">Services</a></li>
       <li><a routerLink="/case-study">Case Studies</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a routerLink="/contact">Contact Us</a></li>
     </ul>
     <a href="#schedule" class="cta-button">SCHEDULE A STRATEGY SESSION</a>
     <div class="hamburger" [ngClass]="{'active': isMobileMenuOpen}" (click)="toggleMobileMenu()">
@@ -22,7 +22,7 @@
     <a routerLink="/about" (click)="closeMobileMenu()">About Us</a>
     <a routerLink="/service" (click)="closeMobileMenu()">Services</a>
     <a routerLink="/case-study" (click)="closeMobileMenu()">Case Studies</a>
-    <a href="#contact" (click)="closeMobileMenu()">Contact Us</a>
+    <a routerLink="/contact" (click)="closeMobileMenu()">Contact Us</a>
     <a href="#schedule" class="mobile-cta" (click)="closeMobileMenu()">SCHEDULE A STRATEGY SESSION</a>
   </div>
   
