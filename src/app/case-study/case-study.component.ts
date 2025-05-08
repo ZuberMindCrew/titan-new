@@ -49,26 +49,26 @@ export class CaseStudyComponent {
         primary: { value: '20%', label: 'Increased Product Adoption' },
         secondary: { value: '$600M', label: 'AUM Growth' }
       },
-      clientOverview: [
-        'Leading asset management firm',
-        'Focus on institutional investors',
-        'Rapid growth phase'
+     clientOverview: [
+        '$3T in assets, serving middle-market companies ($50M-$2B revenue)',
+        'Leading provider of lending, treasury management, and liquidity solutions.',
+        'Skill gaps across teams slowing execution'
       ],
       challenges: [
-        'Scaling operations efficiently',
-        'Talent acquisition and retention',
-        'Process optimization needed'
+        'Fragmented business development and declining portfolio performance.',
+        'Leadership misalignment and poor communication.',
+        'Skill gaps across teams slowing execution'
       ],
       actions: [
-        'Implemented new operational framework',
-        'Developed talent acquisition strategy',
-        'Streamlined key processes'
+        'Reorganized leadership structure for clarity and alignment.',
+        'Overhauled pricing strategy to drive profitability',
+        'Launched a national onboarding program to upskill teams and boost execution'
       ],
       results: [
-        { percentage: '20%', description: 'Increase in operational efficiency' },
-        { percentage: '600M', description: 'Assets under management growth' },
-        { percentage: '30%', description: 'Improvement in talent retention' },
-        { percentage: '25%', description: 'Reduction in processing time' }
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' }
       ]
     },
     {
@@ -81,25 +81,25 @@ export class CaseStudyComponent {
         secondary: { value: '21%', label: 'Revenue Growth via Operations' }
       },
       clientOverview: [
-        'Multi-division corporation',
-        'Focus on operational excellence',
-        'Growth-oriented objectives'
+        '$3T in assets, serving middle-market companies ($50M-$2B revenue)',
+        'Leading provider of lending, treasury management, and liquidity solutions.',
+        'Skill gaps across teams slowing execution'
       ],
       challenges: [
-        'Team performance issues',
-        'Execution bottlenecks',
-        'Revenue growth stagnation'
+        'Fragmented business development and declining portfolio performance.',
+        'Leadership misalignment and poor communication.',
+        'Skill gaps across teams slowing execution'
       ],
       actions: [
-        'Implemented performance management system',
-        'Streamlined execution processes',
-        'Developed revenue growth strategies'
+        'Reorganized leadership structure for clarity and alignment.',
+        'Overhauled pricing strategy to drive profitability',
+        'Launched a national onboarding program to upskill teams and boost execution'
       ],
       results: [
-        { percentage: '30%', description: 'Division growth achieved' },
-        { percentage: '21%', description: 'Revenue growth through operations' },
-        { percentage: '40%', description: 'Improvement in team performance' },
-        { percentage: '35%', description: 'Reduction in bottlenecks' }
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' }
       ]
     },
     {
@@ -112,25 +112,25 @@ export class CaseStudyComponent {
         secondary: { value: '18 Months', label: 'Operations Launch' }
       },
       clientOverview: [
-        'APAC market leader',
-        'US market expansion focus',
-        'Lending operations'
+        '$3T in assets, serving middle-market companies ($50M-$2B revenue)',
+        'Leading provider of lending, treasury management, and liquidity solutions.',
+        'Skill gaps across teams slowing execution'
       ],
       challenges: [
-        'Market entry barriers',
-        'Risk management',
-        'Capital requirements'
+        'Fragmented business development and declining portfolio performance.',
+        'Leadership misalignment and poor communication.',
+        'Skill gaps across teams slowing execution'
       ],
       actions: [
-        'Developed market entry strategy',
-        'Implemented risk framework',
-        'Secured capital funding'
+        'Reorganized leadership structure for clarity and alignment.',
+        'Overhauled pricing strategy to drive profitability',
+        'Launched a national onboarding program to upskill teams and boost execution'
       ],
       results: [
-        { percentage: '10M', description: 'Capital raised successfully' },
-        { percentage: '18', description: 'Month successful launch period' },
-        { percentage: '45%', description: 'Market share captured' },
-        { percentage: '30%', description: 'Risk reduction achieved' }
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
+        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' }
       ]
     }
   ];
