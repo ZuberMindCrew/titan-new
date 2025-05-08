@@ -1,40 +1,120 @@
+
+
+// .hero {
+//   background-color: #111111;
+//   color: white;
+//   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+//     sans-serif;
+//   padding: 6rem 6.5rem 4rem;
+//   display: flex;
+//   justify-content: center;
+
+//   .hero-content {
+   
+//     width: 100%;
+//     margin-top: 100px;
+//     margin-bottom: 80px;
+
+//     h1 {
+//       font-family: 'Manrope', sans-serif;
+//       font-size: 50px;
+//       font-weight: 600;
+//       color: #ffffff;
+//     }
+
+//     p {
+//       font-family: 'Manrope', sans-serif;
+//       font-size: 24px;
+//       font-weight: 600;
+//       color: #ffffff;
+//     }
+
+//     .hero-image {
+//       width: 100%;
+//       height: 600px;
+//       margin-top: 100px;
+
+//       img {
+//         width: 100%;
+//         height: 600px;
+//         border-radius: 6px;
+//         object-fit: cover;
+//         display: block;
+//       }
+//     }
+//   }
+// }
+
 .hero {
   background-color: #111111;
   color: white;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
-  padding: 6rem 6.5rem 4rem;
+  padding: 3rem 1.5rem; // Reduced padding for mobile
   display: flex;
   justify-content: center;
 
   .hero-content {
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top: 150px; // Reduced margin for mobile
+    margin-bottom: 40px; // Reduced margin for mobile
 
     h1 {
-      font-size: 50px;
-      font-weight: 500;
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px; // Smaller font size for mobile
+      font-weight: 600;
       color: #ffffff;
+      line-height: 1.2; // Better line height for mobile
     }
 
     p {
-      font-size: 24px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px; // Smaller font size for mobile
       font-weight: 600;
       color: #ffffff;
+      line-height: 1.4; // Better line height for mobile
     }
 
     .hero-image {
       width: 100%;
-      height: 600px;
-      margin-top: 100px;
+      height: auto; // Changed to auto for mobile
+      margin-top: 50px; // Reduced margin for mobile
+      aspect-ratio: 16/9; // Maintain aspect ratio
 
       img {
         width: 100%;
-        height: 600px;
+        height: auto; // Changed to auto for mobile
+        max-height: 400px; // Set a max height instead of fixed
         border-radius: 6px;
         object-fit: cover;
         display: block;
+      }
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: 768px) {
+    padding: 6rem 6.5rem 4rem;
+
+    .hero-content {
+      margin-top: 100px;
+      margin-bottom: 80px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+      .hero-image {
+        height: 600px;
+        margin-top: 100px;
+
+        img {
+          height: 600px;
+        }
       }
     }
   }
