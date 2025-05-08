@@ -5,7 +5,7 @@
   max-width: 1000px;
   margin: 0 auto;
   height: 240px;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
   // margin-top: 80px;
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2); // Subtle dark overlay for better text readability
+  // background: rgba(0, 0, 0, 0.2); // Subtle dark overlay for better text readability
   z-index: 1; // Ensure overlay is above the background image
 }
 
