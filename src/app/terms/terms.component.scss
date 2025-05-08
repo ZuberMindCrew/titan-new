@@ -1,4 +1,9 @@
 /* Hero Section */
+ /* Import Google Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+  
+
+
 .hero {
     height: 70vh;
     position: relative;
@@ -261,7 +266,11 @@
     }
   }
   
-
+.terms{
+  color: #F1E5E1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
 
   @media only screen and (max-width: 900px) and (min-width: 0px) {
     .terms {
