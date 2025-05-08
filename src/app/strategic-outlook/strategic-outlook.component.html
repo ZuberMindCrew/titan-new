@@ -8,7 +8,8 @@
           *ngFor="let challenge of challenges" 
           class="challenge-card" 
           [ngClass]="{'gray': challenge.variant === 'gray', 'beige': challenge.variant === 'beige'}">
-          <h3 class="challenge-title" style="font-size: 15px; font-weight: 600;">{{challenge.title}}</h3>
+          <!-- <h3 class="challenge-title" style="font-size: 15px; font-weight: 600;">{{challenge.title}}</h3> -->
+          <h3 class="challenge-title">{{challenge.title}}</h3>
           <p class="challenge-description" >{{challenge.description}}</p>
         </div>
       </div>
