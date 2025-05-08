@@ -16,9 +16,9 @@ const routes: Routes = [
   {path:'about', component: AboutComponent},
   {path:'service', component: ServiceComponent},
   {path:'terms', component: TermsComponent},
-  {path:'case-study', component: CaseStudyComponent},
+  {path:'case-studies', component: CaseStudyComponent},
   {path:'contact', component: ContactComponent},
-  {path:'case-study-two', component: CaseStudyTwoComponent},
+  {path:'case-study/:id', component: CaseStudyTwoComponent},
   {path:'privacy',component: PrivacyComponent},
   {path:'privacy-policy',component: PrivacyPolicyComponent}
 ];

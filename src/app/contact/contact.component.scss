@@ -286,35 +286,16 @@
     width: 100%;
   }
   
-  /* Title styling */
-  .title {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 42px;
-    color: #2e557d;
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  
-  .title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 280px;
-    width: 320px;
-    height: 2px;
-    background-color: #2e557d;
-    transform: rotate(-2deg);
-  }
+
   
   /* Description text */
   .description {
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
+    font-weight: 600;
     max-width: 850px;
     margin: 40px auto 50px;
-    color: #0c0c3c;
+    color: #0C0C3C;
     line-height: 1.6;
   }
   
