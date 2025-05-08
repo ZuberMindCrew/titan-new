@@ -146,6 +146,7 @@
   .service-title {
     font-size: 16px;
     font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
   }
   
   @media (max-width: 1200px) {
@@ -163,6 +164,7 @@
     
     .service-title {
       font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
     }
   }
   
@@ -216,6 +218,7 @@
     .service-title {
       font-size: 9px;
       margin-right: 10px;
+      font-family: 'Montserrat', sans-serif;
     }
 
 .service-areas-container{
@@ -274,6 +277,7 @@
     line-height: 1.5;
     color: #0c0c3c;
     background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .contact-section {
@@ -297,6 +301,8 @@
     margin: 40px auto 50px;
     color: #0C0C3C;
     line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   /* Form styling */
@@ -309,15 +315,19 @@
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 24px;
     color: #0c0c3c;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .field-label {
     display: block;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 4px;
     color: #0c0c3c;
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   .form-input {
@@ -325,8 +335,11 @@
     padding: 12px;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
     height: 48px;
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   .name-fields {
@@ -364,7 +377,11 @@
   }
   
   .checkbox-item label {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0C0C3C;
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   .checkbox-item.single {
@@ -376,6 +393,8 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 32px;
+    padding: 0px 70px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .submit-button {
@@ -390,11 +409,15 @@
     gap: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
   }
   
   .submit-button svg {
     width: 16px;
     height: 16px;
+    transform: rotate(-45deg);
+    margin-right: 8px;
   }
   
   /* Responsive adjustments */
@@ -417,6 +440,15 @@
     .checkbox-item {
       margin-right: 0;
     }
+    .contact-section {
+      // max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 4%;
+    }
+    .form-group {
+      margin-bottom: 24px;
+      padding: 0px 20px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -430,5 +462,14 @@
     
     .form-label {
       font-size: 16px;
+    }
+    .contact-section {
+      // max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 4%;
+    }
+    .form-group {
+      margin-bottom: 24px;
+      padding: 0px 20px;
     }
   }
