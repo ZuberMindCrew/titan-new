@@ -6,6 +6,7 @@ import { ServiceComponent } from './service/service.component';
 import { TermsComponent } from './terms/terms.component';
 import { CaseStudyComponent } from './case-study/case-study.component';
 import { ContactComponent } from './contact/contact.component';
+import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'service', component: ServiceComponent},
   {path:'terms', component: TermsComponent},
   {path:'case-study', component: CaseStudyComponent},
-  {path:'contact', component: ContactComponent}
+  {path:'contact', component: ContactComponent},
+  {path:'case-study-two', component: CaseStudyTwoComponent}
 ];
 
 @NgModule({
