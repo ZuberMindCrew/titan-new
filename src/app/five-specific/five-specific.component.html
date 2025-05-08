@@ -6,7 +6,7 @@
   </div>
   
   <div class="counter-arrows-section">
-    <div class="slide-counter">{{currentSlide + 1}}—{{totalSlides}}</div>
+    <div class="slide-counter">{{currentSlide + 1}}-{{totalSlides}}</div>
     <div class="navigation-arrows">
       <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,13 +48,13 @@
           </div>
         </div>
         
-        <div class="thumbnail-container" (click)="goToSlide(getNextIndex())" (touchend)="goToSlide(getNextIndex())">
+        <!-- <div class="thumbnail-container" (click)="goToSlide(getNextIndex())" (touchend)="goToSlide(getNextIndex())">
           <img [src]="slide.thumbnailImage" [alt]="'Thumbnail for ' + (slides[getNextIndex()].title || 'project')" class="thumbnail-image">
           <div class="thumbnail-overlay">
             <span class="next-indicator">{{getNextIndex() + 1}}—{{totalSlides}}</span>
             <span class="view-text">View Next</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
