@@ -65,7 +65,7 @@
     bottom: 19px;
     width: 92%;
     border-radius: 12px;
-    height: 96%;
+    height: 92%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
@@ -109,6 +109,18 @@
     .team-card h3 {
       font-size: 20px;
     }
+    .image-container img {
+      position: absolute;
+      top: 19px;
+      left: 19px;
+      right: 19px;
+      bottom: 19px;
+      width: 89%;
+      border-radius: 12px;
+      height: 92%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
   }
   
   @media (max-width: 768px) {
@@ -124,6 +136,19 @@
     .team-section h2 {
       font-size: 32px;
       margin-bottom: 40px;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 19px;
+      left: 19px;
+      right: 19px;
+      bottom: 19px;
+      width: 89%;
+      border-radius: 12px;
+      height: 96%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
   }
   
