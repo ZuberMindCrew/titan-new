@@ -59,7 +59,7 @@
   
   .hero-content {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 90px;
     transform: translateY(-50%);
     color: white;
@@ -75,7 +75,7 @@
   }
   
   .hero-content p {
-    font-size: 15px;
+    font-size: 85px;
     margin-bottom: 40px;
     font-weight: 300;
   }
@@ -473,3 +473,17 @@
       padding: 0px 20px;
     }
   }
+
+
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .contact {
+       font-size: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 3900px) and (min-width: 901px) {
+  .contact {
+     font-size: 80px !important;
+     padding-top: 20px !important;
+  }
+}
