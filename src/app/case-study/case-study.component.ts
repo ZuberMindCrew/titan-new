@@ -127,10 +127,11 @@ export class CaseStudyComponent {
         'Launched a national onboarding program to upskill teams and boost execution'
       ],
       results: [
-        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
-        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
-        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' },
-        { percentage: '23%', description: 'Reduction in expenses with greater efficiency' }
+        { percentage: '23%', description: 'reduction in expenses with greater efficiency' },
+        { percentage: '3X', description: 'revenue growth year-over-year' },
+        { percentage: '', description: 'Liquidity profitability improved by 1k+ bps' },
+        { percentage: '', description: 'Division became #1 globally, outperforming three regions combined' },
+        { percentage: '', description: 'Created sustained growth with engaged, high-performing teams' }
       ]
     }
   ];

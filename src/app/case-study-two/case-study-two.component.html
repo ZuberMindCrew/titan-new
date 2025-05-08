@@ -1,7 +1,7 @@
 <section class="hero" *ngIf="caseStudy">
   <div class="hero-content">
-    <h1>{{caseStudy.title}}</h1>
-    <p>{{caseStudy.subtitle}}</p>
+    <h1>{{ caseStudy.title }}</h1>
+    <p>{{ caseStudy.subtitle }}</p>
     <div class="hero-image">
       <img [src]="caseStudy.heroImage" [alt]="caseStudy.title" />
     </div>
@@ -11,20 +11,22 @@
 <div class="case-study-container" *ngIf="caseStudy">
   <!-- Header -->
   <div class="header">
-    <h1 class="main-title">{{caseStudy.title}}</h1>
-    <h2 class="subtitle">{{caseStudy.subtitle}}</h2>
+    <h1 class="main-title">{{ caseStudy.title }}</h1>
+    <h2 class="subtitle">{{ caseStudy.subtitle }}</h2>
   </div>
 
   <!-- Key Metrics -->
   <div class="metrics-container">
     <div class="metric-circle">
-      <span class="metric-value">{{caseStudy.metrics.primary.value}}</span>
-      <span class="metric-label">{{caseStudy.metrics.primary.label}}</span>
+      <span class="metric-value">{{ caseStudy.metrics.primary.value }}</span>
+      <span class="metric-label">{{ caseStudy.metrics.primary.label }}</span>
     </div>
     <div class="metric-circle">
-      <span class="metric-value">{{caseStudy.metrics.secondary.value}}</span>
+      <span class="metric-value">{{ caseStudy.metrics.secondary.value }}</span>
       <div class="metric-label-group">
-        <span class="metric-label">{{caseStudy.metrics.secondary.label}}</span>
+        <span class="metric-label">{{
+          caseStudy.metrics.secondary.label
+        }}</span>
       </div>
     </div>
   </div>
@@ -36,7 +38,7 @@
       <ul class="bullet-list">
         <li class="bullet-item" *ngFor="let item of caseStudy.clientOverview">
           <span class="bullet-point"></span>
-          <span class="bullet-text">{{item}}</span>
+          <span class="bullet-text">{{ item }}</span>
         </li>
       </ul>
     </div>
@@ -47,7 +49,7 @@
       <ul class="bullet-list">
         <li class="bullet-item" *ngFor="let item of caseStudy.challenges">
           <span class="bullet-point"></span>
-          <span class="bullet-text">{{item}}</span>
+          <span class="bullet-text">{{ item }}</span>
         </li>
       </ul>
     </div>
@@ -58,7 +60,7 @@
       <ul class="bullet-list">
         <li class="bullet-item" *ngFor="let item of caseStudy.actions">
           <span class="bullet-point"></span>
-          <span class="bullet-text">{{item}}</span>
+          <span class="bullet-text">{{ item }}</span>
         </li>
       </ul>
     </div>
@@ -68,8 +70,8 @@
       <h2 class="section-title">The Result</h2>
       <div class="result-cards">
         <div class="result-card" *ngFor="let result of caseStudy.results">
-          <span class="result-percentage">{{result.percentage}}</span>
-          <span class="result-description">{{result.description}}</span>
+          <span class="result-percentage">{{ result.percentage }}</span>
+          <span class="result-description">{{ result.description }}</span>
         </div>
       </div>
     </div>
