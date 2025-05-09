@@ -59,7 +59,7 @@
   
   .hero-content {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 90px;
     transform: translateY(-50%);
     color: white;
@@ -261,3 +261,19 @@
     }
   }
   
+.privacy{
+  color: #F1E5E1;
+}
+
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .privacy {
+       font-size: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 3900px) and (min-width: 901px) {
+  .privacy {
+     font-size: 80px !important;
+     padding-top: 20px !important;
+  }
+}

@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-
 .process-section {
   background-color: #FFFFFF;
-  padding: 80px 0;
+  padding: 0px 0px 80px 0px;
   width: 100%;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -26,20 +24,22 @@
 }
 
 .hero-image {
-  width: 1000px;
+  width: 100%;
   height: 500px;
-  margin-left: 100px;
+  // margin-left: 100px;
   margin-bottom: 50px;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 20px;
+  // overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 500px;
   display: block;
   object-fit: cover;
+  border-radius: 20px;
+
 }
 
 .process-steps {
@@ -47,6 +47,7 @@
   justify-content: space-between;
   gap: 10px;
   margin-top: 50px;
+  // display: none;
 }
 
 .process-step {
@@ -76,8 +77,8 @@
 }
 
 .process-step h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   color: #0C0C3C;
   margin: 0;
   font-family: 'Outfit', sans-serif;
@@ -95,13 +96,13 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #0056B3;
+  background-color: #025191;
   color: white;
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 500;
   padding: 14px 24px;
-  border-radius: 6px;
+  border-radius: 9px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -112,6 +113,7 @@
 
 .strategy-button svg {
   margin-left: 5px;
+  transform: rotate(-45deg);
 }
 
 @media (max-width: 1024px) {
@@ -163,16 +165,16 @@
     max-width: 320px;
   }
   .hero-image {
-    width: 90%;
+    width: 100%;
     height: 200px;
-    margin-right: 400px;
+    // margin-right: 400px;
     margin-bottom: 50px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
   .hero-image img {
-    width: 90%;
+    width: 100%;
     height: 200px;
     display: block;
     object-fit: cover;
@@ -211,5 +213,18 @@
   .strategy-button {
     font-size: 14px;
     padding: 12px 20px;
+  }
+  .hero-image {
+    margin-bottom: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
 }

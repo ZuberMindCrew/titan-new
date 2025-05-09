@@ -64,8 +64,8 @@
 }
 
 .stat-circle {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@
 
 .percentage {
   font-family: 'Unbounded', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
   margin-bottom: 0;
   line-height: 1.1;
@@ -124,7 +124,8 @@
   }
   
   .percentage {
-    font-size: 38px;
+    // font-size: 38px;
+    font-size: 27px;
   }
   
   .description {
@@ -157,7 +158,8 @@
   }
   
   .percentage {
-    font-size: 34px;
+    // font-size: 34px;
+    font-size: 23px;
   }
   
   .description {
@@ -216,7 +218,8 @@
   }
   
   .percentage {
-    font-size: 28px;
+    // font-size: 28px;
+    font-size: 18px;
   }
   
   .description {
@@ -250,14 +253,18 @@
   }
   
   .stat-circle {
-    width: 100px;
+    // width: 100px;
+    // height: 100px;
+    // margin: 0 -6px -19px;
+    // padding: 8px;
+    width: 84px;
     height: 100px;
-    margin: 0 -6px -19px;
+    /* margin: 0 -6px -19px; */
     padding: 8px;
   }
   
   .percentage {
-    font-size: 23px;
+    font-size: 14px;
   }
   
   .description {
@@ -271,14 +278,17 @@
 
 @media (max-width: 360px) {
   .stat-circle {
-    width: 90px;
+    // width: 90px;
+    // height: 90px;
+    width: 78px;
     height: 90px;
-    margin: 0 -10px -19px;
+    // margin: 0 -10px -19px;
     padding: 6px;
   }
   
   .percentage {
-    font-size: 22px;
+    // font-size: 22px;
+    font-size: 12px;
   }
   
   .description {
