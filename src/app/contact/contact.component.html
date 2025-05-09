@@ -14,8 +14,8 @@
 
   <section class="contact-section">
     <div class="form-container">
-      <div style="height: 112px; display: flex; justify-content: center; align-items: center;">
-        <img src="assets/letsBuildSolution.png" alt="" style="height: 100%;" />
+      <div class="logo-container" style="height: 112px; display: flex; justify-content: center; align-items: center;">
+        <img src="assets/letsBuildSolution.png" alt="" class="logo-image" style="height: 100%;" />
       </div>
             
       <p class="description">
@@ -119,3 +119,14 @@
       </form>
     </div>
   </section>
+
+<style>
+  @media (max-width: 768px) {
+    .logo-container {
+      height: 80px !important;
+    }
+    .logo-image {
+      height: 80% !important;
+    }
+  }
+</style>
