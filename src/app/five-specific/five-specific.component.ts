@@ -26,7 +26,7 @@ export class FiveSpecificComponent {
   @ViewChild("sliderContainer") sliderContainer!: ElementRef
 
   currentSlide = 0
-  totalSlides = 3
+  totalSlides = 5
   isAnimating = false
   isTouchDevice = false
   imagesLoaded = false
@@ -55,6 +55,22 @@ export class FiveSpecificComponent {
       title: "Merger Without Momentum",
       description:
         "“We just expanded into a new region, but we seem to be dead in the water. The market’s confused, our teams aren’t synced, and our competitors already saw the gap.”",
+    },
+    {
+      id: 4,
+      mainImage: "./assets/Gears.jpg",
+      thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
+      title: "Innovation Stuck In Limbo",
+      description:
+        "“It's been six months since the merger—and instead of synergy, we've got sludge. Teams aren't integrating, cultures are clashing, and execution is crawling, and the value of this deal is cratering.”",
+    },
+    {
+      id: 5,
+      mainImage: "./assets/AI-Image.jpg",
+      thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
+      title: "When the Tech is Ready, but Team isn't",
+      description:
+        "“We made big bets on AI and automation, but they're stuck in limbo. The tools are there, but leadership is hesitant, teams are pushing back, and our competitors are leapfrogging us.”",
     },
 
   ];
