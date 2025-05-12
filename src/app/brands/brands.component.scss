@@ -51,7 +51,7 @@
   
   .logo-item {
     flex: 0 0 auto;
-    margin: 0 16px;
+    margin: 0 66px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,11 +139,14 @@
     
     .logo-item {
       padding: 0 15px;
+      margin: 0 16px;
     }
     
     .logo-item img {
       max-height: 150px;
       max-width: 120px;
     }
+
+
   }
   
