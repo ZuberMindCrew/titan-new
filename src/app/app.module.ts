@@ -34,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CaseStudyTwoComponent } from './case-study-two/case-study-two.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     ContactComponent,
     CaseStudyTwoComponent,
     PrivacyComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,

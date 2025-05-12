@@ -1,0 +1,254 @@
+// Variables
+$primary-red: #2e557d;
+$text-white: #ffffff;
+$card-bg: #ffffff;
+$card-text: #333333;
+$star-color: $primary-red;
+$quote-color: #0097a7;
+
+// Base styles
+:host {
+  display: block;
+  width: 100%;
+}
+
+// Testimonials Section
+.testimonials-section {
+  background-color: $primary-red;
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e63946' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+// Testimonials Header
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+  
+  .main-heading, .sub-heading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-white;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  
+  .main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .sub-heading {
+    font-size: 3.5rem;
+    // font-style: italic;
+    margin-top: 0;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 25px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    font-family: 'Outfit', sans-serif;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: $text-white;
+    line-height: 1.5;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: $text-white;
+  }
+}
+
+// Testimonials Carousel
+.testimonials-carousel {
+  position: relative;
+  
+  .carousel-container {
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+}
+
+// Testimonial Card
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 40px);
+  margin: 0 20px;
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 1199px) {
+    flex: 0 0 calc(50% - 40px);
+  }
+  
+  @media (max-width: 767px) {
+    flex: 0 0 calc(100% - 40px);
+  }
+  
+  .quote-mark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: $quote-color;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    
+    .star {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e41c1c'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  
+  .testimonial-text {
+    color: $card-text;
+    font-size: 1.1rem;
+    // font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    
+    .author-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .author-info {
+      .author-name {
+        font-weight: 700;
+        color: $card-text;
+        margin: 0 0 5px;
+        font-size: 1.1rem;
+      }
+      
+      .author-title {
+        font-size: 0.9rem;
+        color: lighten($card-text, 20%);
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Carousel Navigation
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  
+  .nav-arrow {
+    background: transparent;
+    border: 2px solid $text-white;
+    color: $text-white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 0;
+    
+    &:hover:not([disabled]) {
+      background-color: $text-white;
+      color: $primary-red;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  
+  .carousel-dots {
+    display: flex;
+    margin: 0 20px;
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+      
+      &.active {
+        background-color: $text-white;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
