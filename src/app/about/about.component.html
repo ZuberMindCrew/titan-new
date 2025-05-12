@@ -1,4 +1,4 @@
-<section class="hero">
+<!-- <section class="hero">
     <div class="hero-video-container">
       <img 
         src="assets/skybuilding.jpg" 
@@ -9,9 +9,43 @@
     </div>
     <div class="hero-content" style="left: 0; right: 0; text-align: center; margin: auto; max-width: 100%;">
       <h1 style="font-size:80px; font-weight:500; text-align: center; width: 100%;">About Us</h1>
-      <!-- <h1>About Us</h1> -->
     </div>
   </section>
   <app-profile-section></app-profile-section>
   <app-team-section></app-team-section>
-  <app-advisors-section></app-advisors-section>
+  <app-advisors-section></app-advisors-section> -->
+
+
+
+
+<head>
+  <link rel="preload" href="assets/skybuilding.jpg" as="image">
+</head>
+
+<section class="hero">
+  <div class="hero-video-container">
+    <!-- Loading spinner -->
+    <div class="loader" *ngIf="!imageLoaded">
+      <div class="spinner"></div>
+    </div>
+
+    <img 
+    [src]="imageLoaded ? 'assets/skybuilding.jpg' : ''" 
+    alt="Sky Building" 
+    class="hero-video"
+    [class.loaded]="imageLoaded" 
+    (load)="imageLoaded = true" 
+    style="width: 100%; height: 100%; object-fit: cover;">
+
+    <div class="video-overlay"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));">
+    </div>
+  </div>
+  <div class="hero-content" style="left: 0; right: 0; text-align: center; margin: auto; max-width: 100%;" *ngIf="imageLoaded">
+    <h1 style="font-size:80px; font-weight:500; text-align: center; width: 100%; color: #F1E5E1;">About Us</h1>
+  </div>
+</section>
+
+<app-profile-section></app-profile-section>
+<app-team-section></app-team-section>
+<app-advisors-section></app-advisors-section>

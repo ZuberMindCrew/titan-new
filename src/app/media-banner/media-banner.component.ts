@@ -13,6 +13,7 @@ export class MediaBannerComponent {
     "https://static.cdnlogo.com/logos/f/42/forbes.png",
     "assets/nbc.png",
     "assets/wsj.png",
-    "assets/miami.png"
+    "assets/miami.png",
+    "assets/SHRM.png"
   ]
 }

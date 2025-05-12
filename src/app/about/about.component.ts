@@ -23,6 +23,7 @@ export class AboutComponent {
   currentIndex = 3 // Start with Communications active (index 3)
   cycleInterval: any
   videoError = false
+  imageLoaded = false;
 
   private async tryPlayVideo(video: HTMLVideoElement) {
     try {
@@ -44,7 +45,11 @@ export class AboutComponent {
     }
   }
 
+  
+
   ngOnInit() {
+
+    
     // Start automatic cycling
     this.cycleInterval = setInterval(() => this.cycleServiceAreas(), 5000)
 
@@ -72,6 +77,17 @@ export class AboutComponent {
         }, { once: true });
       }
     }, 100)
+
+
+
+     // Optional: You can add a timeout to ensure spinner shows for minimum time
+     setTimeout(() => {
+      const img = new Image();
+      img.src = 'assets/skybuilding.jpg';
+      img.onload = () => {
+        this.imageLoaded = true;
+      };
+    }, 0);
   }
 
   ngOnDestroy() {
@@ -102,4 +118,9 @@ export class AboutComponent {
   onVideoError() {
     this.videoError = true
   }
+
+
+
 }
+
+

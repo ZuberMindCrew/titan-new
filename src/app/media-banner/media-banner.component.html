@@ -1,15 +1,33 @@
-<section class="media-banner">
+<!-- <section class="media-banner">
     <h2>Where We've Been Seen</h2>
     <div class="media-logos">
-      <!-- Original logos -->
+    
       <div class="media-logo" *ngFor="let logo of mediaLogos">
         <img [src]="logo" >
       </div>
       
-      <!-- Repeated logos for seamless scrolling -->
+     
       <div class="media-logo" *ngFor="let logo of mediaLogos">
         <img [src]="logo" >
       </div>
     </div>
   </section>
-  
+   -->
+
+
+   <section class="media-banner">
+    <h2>Where We've Been Seen</h2>
+    <div class="media-logos-container">
+        <div class="media-logos">
+            <!-- Original logos -->
+            <div class="media-logo" *ngFor="let logo of mediaLogos">
+                <img [src]="logo" alt="Media outlet logo">
+            </div>
+            
+            <!-- Repeated logos for seamless scrolling -->
+            <div class="media-logo" *ngFor="let logo of mediaLogos">
+                <img [src]="logo" alt="Media outlet logo">
+            </div>
+        </div>
+    </div>
+</section>
