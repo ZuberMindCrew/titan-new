@@ -34,7 +34,7 @@ export class FiveSpecificComponent {
   slides: SlideItem[] = [
     {
       id: 1,
-      mainImage: "./assets/blurredpeople.jpg",
+      mainImage: "./assets/blurredpeople-min.jpg",
       thumbnailImage: "https://framerusercontent.com/images/0lGRwLn7wxL3yhav7d46r1ooW3A.jpg?scale-down-to=2048",
       title: " Global Reorganization",
       description:
@@ -42,7 +42,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 2,
-      mainImage: "./assets/StructureChallenges.jpg",
+      mainImage: "./assets/StructureChallenges-min.jpg",
       thumbnailImage: "https://framerusercontent.com/images/9tihVDgmIjE9YcdbUveeRROMIl0.jpg?scale-down-to=2048",
       title: "Scaling w/o Stability",
       description:
@@ -50,7 +50,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 3,
-      mainImage: "./assets/TrainonTrack.jpg",
+      mainImage: "./assets/TrainonTrack-min.jpg",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       title: "Merger Without Momentum",
       description:
@@ -58,7 +58,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 4,
-      mainImage: "./assets/Gears.jpg",
+      mainImage: "./assets/Gears-min.jpg",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       title: "Innovation Stuck In Limbo",
       description:
@@ -66,7 +66,7 @@ export class FiveSpecificComponent {
     },
     {
       id: 5,
-      mainImage: "./assets/AI-Image.jpg",
+      mainImage: "./assets/AI-Image-min.jpg",
       thumbnailImage: "https://framerusercontent.com/images/7ST3Zhsn4noPkFT9RujmHCO0.jpg?scale-down-to=2048",
       title: "When the Tech is Ready, but Team isn't",
       description:
