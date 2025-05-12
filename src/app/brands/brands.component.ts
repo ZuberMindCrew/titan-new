@@ -47,6 +47,7 @@ export class BrandsComponent {
       name: "HSBC",
       url: "assets/gg-Photoroom.png",
     },
+    
   ]
 
   // Duplicate logos for seamless infinite scroll
