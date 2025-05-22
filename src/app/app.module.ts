@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';  // Import HttpClientModule
+import { FormsModule } from '@angular/forms';  // Import FormsModule
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -74,7 +77,10 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,  // Add HttpClientModule to imports
+    FormsModule        // Add FormsModule to imports
+
   ],
   providers: [],
   bootstrap: [AppComponent]

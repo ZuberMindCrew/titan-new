@@ -1,13 +1,11 @@
-<section class="hero">
+<!-- <section class="hero">
     <div class="hero-video-container" style="background-color: #191919; width: 100%; height: 100%;">
       <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));"></div>
     </div>
-    <!-- <div class="hero-content" style="left: 80px; right: 0; text-align: left; margin: auto; max-width: 100%;">
-      <p style="font-size:50px; font-weight:500; text-align: left; width: 100%; margin-top:100px">Contact Us</p>
-    </div> -->
+  
     <div class="hero-content" style="left: 0; right: 0; text-align: center; margin: auto; max-width: 100%;">
       <h1 style="font-weight:500; text-align: center; width: 100%;" class="contact">Contact Us</h1>
-      <!-- <h1>About Us</h1> -->
+    
     </div>
   </section>
 
@@ -22,7 +20,7 @@
         If you're ready to discuss creating a transformational organization with our proven frameworks, programs, team and resources, please fill out the form below and we'll reach out to schedule a strategy session. We look forward to connecting with you soon!
       </p>
       
-      <form class="contact-form">
+      <form class="contact-form" >
         <div class="form-group">
           <label class="form-label">Name ( Required )</label>
           <div class="name-fields">
@@ -43,7 +41,7 @@
         </div>
         
         <div class="form-group">
-          <label class="form-label">I'm interested in:</label>
+          <label class="form-label">I'm interested in (select as many that apply):</label>
           <div class="checkbox-group">
             <div class="checkbox-row">
               <div class="checkbox-item">
@@ -102,8 +100,8 @@
         
         <div class="form-group">
           <div class="checkbox-item single">
-            <input type="checkbox" id="newsletter">
-            <label for="newsletter">Sign up for news and updates</label>
+            <input type="checkbox" id="newsLetter">
+            <label for="newsLetter">Sign up for news and updates</label>
           </div>
         </div>
         
@@ -129,4 +127,168 @@
       height: 80% !important;
     }
   }
-</style>
+</style> -->
+
+
+<section class="hero">
+  <div class="hero-video-container" style="background-color: #191919; width: 100%; height: 100%;">
+    <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));"></div>
+  </div>
+  <div class="hero-content" style="left: 0; right: 0; text-align: center; margin: auto; max-width: 100%;">
+    <h1 style="font-weight:500; text-align: center; width: 100%;" class="contact">Contact Us</h1>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="form-container">
+    <div class="logo-container" style="height: 112px; display: flex; justify-content: center; align-items: center;">
+      <img src="assets/letsBuildSolution.png" alt="" class="logo-image" style="height: 100%;" />
+    </div>
+
+    <p class="description">
+      If you're ready to discuss creating a transformational organization with our proven frameworks, programs, team and resources, please fill out the form below and we'll reach out to schedule a strategy session. We look forward to connecting with you soon!
+    </p>
+      
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group">
+        <label class="form-label">Name (Required)</label>
+        <div class="name-fields">
+          <div class="input-group">
+            <label class="field-label">First name</label>
+            <input type="text" class="form-input" [(ngModel)]="formData.firstName" name="firstName" required />
+          </div>
+          <div class="input-group">
+            <label class="field-label">Last name</label>
+            <input type="text" class="form-input" [(ngModel)]="formData.lastName" name="lastName" required />
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Organization (Required)</label>
+        <input type="text" class="form-input" [(ngModel)]="formData.organization" name="organization" required />
+      </div>
+
+      <!-- <div class="form-group">
+        <label class="form-label">I'm interested in (select as many that apply):</label>
+        <div class="checkbox-group">
+          <div class="checkbox-row">
+            <div class="checkbox-item">
+              <input type="checkbox" id="strategic-planning" [(ngModel)]="formData.interests" name="interests" value="Strategic Planning">
+              <label for="strategic-planning">Strategic Planning</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="change-management" [(ngModel)]="formData.interests" name="interests" value="Change Management">
+              <label for="change-management">Change Management</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="organizational-performance" [(ngModel)]="formData.interests" name="interests" value="Organizational Performance">
+              <label for="organizational-performance">Organizational Performance</label>
+            </div>
+          </div>
+         
+        </div>
+      </div> -->
+
+
+      <div class="form-group">
+        <label class="form-label">I'm interested in (select as many that apply):</label>
+        <div class="checkbox-group">
+          <div class="checkbox-row">
+            <div class="checkbox-item">
+              <input type="checkbox" id="strategic-planning" 
+                     [(ngModel)]="formData.interests.strategicPlanning" 
+                     name="strategicPlanning">
+              <label for="strategic-planning">Strategic Planning</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="change-management" 
+                     [(ngModel)]="formData.interests.changeManagement" 
+                     name="changeManagement">
+              <label for="change-management">Change Management</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="organizational-performance" 
+                     [(ngModel)]="formData.interests.organizationalPerformance" 
+                     name="organizationalPerformance">
+              <label for="organizational-performance">Organizational Performance</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="strategic-communications" 
+                     [(ngModel)]="formData.interests.strategicCommunications" 
+                     name="strategicCommunications">
+              <label for="strategic-communications">Strategic Communications</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="executive-advisory" 
+                     [(ngModel)]="formData.interests.executiveAdvisory" 
+                     name="executiveAdvisory">
+              <label for="executive-advisory">Executive Advisory Services</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="ceo-speaking" 
+                     [(ngModel)]="formData.interests.ceoSpeaking" 
+                     name="ceoSpeaking">
+              <label for="ceo-speaking">Hiring CEO Carrie Moore to Speak</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="executive-forum" 
+                     [(ngModel)]="formData.interests.executiveForum" 
+                     name="executiveForum">
+              <label for="executive-forum">Join Executive Forum List</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+   
+
+
+      
+      <div class="form-group">
+        <label class="form-label">Schedule a 30-minute strategy session with our team</label>
+        <div class="checkbox-item single">
+          <input type="checkbox" id="yes-schedule" [(ngModel)]="formData.scheduleSession" name="scheduleSession">
+          <label for="yes-schedule">Yes</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Phone number (Required)</label>
+        <!-- <input type="tel" class="form-input" [(ngModel)]="formData.phoneNumber" name="phoneNumber" required /> -->
+        <input 
+        type="tel" 
+        class="form-input" 
+        [(ngModel)]="formData.phoneNumber" 
+        name="phoneNumber" 
+        (input)="formatPhoneNumber()"
+        placeholder="(123) 456-7890"
+        pattern="\(\d{3}\) \d{3}-\d{4}"
+        required 
+      />
+      <small class="form-hint">Format: (123) 456-7890</small>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email address (Required)</label>
+        <input type="email" class="form-input" [(ngModel)]="formData.email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-item single">
+          <input type="checkbox" id="newsLetter" [(ngModel)]="formData.newsLetter" name="newsLetter">
+          <label for="newsLetter">Sign up for news and updates</label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-button">I am interested</button>
+      </div>
+    </form>
+  </div>
+</section>

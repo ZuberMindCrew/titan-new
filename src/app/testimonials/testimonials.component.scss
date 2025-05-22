@@ -12,6 +12,9 @@ $quote-color: #0097a7;
   width: 100%;
 }
 
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+ 
+
 // Testimonials Section
 .testimonials-section {
   background-color: $primary-red;
@@ -47,7 +50,7 @@ $quote-color: #0097a7;
   
   .main-heading, .sub-heading {
     font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     color: $text-white;
     line-height: 1.1;
@@ -56,17 +59,18 @@ $quote-color: #0097a7;
   }
   
   .main-heading {
-    font-size: 3.5rem;
+    font-size: 30px;
     margin-bottom: 0;
     font-family: 'Outfit', sans-serif;
   }
   
   .sub-heading {
-    font-size: 3.5rem;
+    margin-top: 15px;
+    font-size: 23px;
     // font-style: italic;
-    margin-top: 0;
     font-family: 'Outfit', sans-serif;
     margin-bottom: 25px;
+    margin-top: 20px;
   }
   
   .description {
@@ -79,11 +83,12 @@ $quote-color: #0097a7;
   }
   
   .tagline {
-    font-size: 1.2rem;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-top: 20px;
     color: $text-white;
+    text-transform: uppercase;
   }
 }
 
@@ -155,7 +160,7 @@ $quote-color: #0097a7;
     // font-style: italic;
     line-height: 1.6;
     margin-bottom: 30px;
-    flex-grow: 1;
+    // flex-grow: 1;
   }
   
   .testimonial-author {
@@ -195,60 +200,439 @@ $quote-color: #0097a7;
 }
 
 // Carousel Navigation
-.carousel-navigation {
+// .carousel-navigation {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 40px;
+  
+//   .nav-arrow {
+//     background: transparent;
+//     border: 2px solid $text-white;
+//     color: $text-white;
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: all 0.3s ease;
+//     padding: 0;
+    
+//     &:hover:not([disabled]) {
+//       background-color: $text-white;
+//       color: $primary-red;
+//     }
+    
+//     &:focus {
+//       outline: none;
+//     }
+    
+//     &[disabled] {
+//       opacity: 0.5;
+//       cursor: not-allowed;
+//     }
+//   }
+  
+//   .carousel-dots {
+//     display: flex;
+//     margin: 0 20px;
+    
+//     .dot {
+//       width: 12px;
+//       height: 12px;
+//       border: none;
+//       border-radius: 50%;
+//       background-color: rgba(255, 255, 255, 0.5);
+//       margin: 0 5px;
+//       cursor: pointer;
+//       transition: all 0.3s ease;
+//       padding: 0;
+      
+//       &.active {
+//         background-color: $text-white;
+//         transform: scale(1.2);
+//       }
+//     }
+//   }
+// }
+
+.carousel-dots {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
   
-  .nav-arrow {
-    background: transparent;
-    border: 2px solid $text-white;
-    color: $text-white;
-    width: 40px;
-    height: 40px;
+  .dot {
+    width: 12px;
+    height: 12px;
+    border: none;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: all 0.3s ease;
     padding: 0;
     
-    &:hover:not([disabled]) {
+    &.active {
       background-color: $text-white;
-      color: $primary-red;
+      transform: scale(1.2);
     }
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 3900px) and (min-width: 901px) {
+
+
+
+// Variables
+$primary-color: #2e557d;
+$text-white: #ffffff;
+$card-bg: #ffffff;
+$card-text: #333333;
+$star-color: #e41c1c;
+$divider-color: #e0e0e0;
+$arrow-color: $text-white;
+$arrow-hover: darken($arrow-color, 10%);
+$quote-color: #0097a7;
+
+
+
+
+
+.testimonital-header{
+  color: #333333;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  font-size: 23px;
+}
+
+.testimonial-para{
+  color: $card-text;
+  font-size: 1.1rem;
+  // font-style: italic;
+  line-height: 1.6;
+  // margin-bottom: 30px;
+  flex-grow: 1;
+  padding-left: 6px;
+}
+
+
+/* Special style only for Kim Martin's testimonial */
+.testimonial-para.long-para {
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  padding-left: 6px;
+  max-height: 11em;
+  overflow-x: scroll;
+}
+
+// .testimonials-carousel{
+//   // display: flex;
+// }
+
+// Testimonials Carousel
+.testimonials-carousel {
+  position: relative;
+  
+  .carousel-container {
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+}
+
+
+// Testimonials Header
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+  
+  .main-heading, .sub-heading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-white;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  
+  .main-heading {
+    font-size: 45px;
+    margin-bottom: 0;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .sub-heading {
+    font-size: 40px;
+    // font-style: italic;
+    margin-top: 0;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    font-family: 'Outfit', sans-serif;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: $text-white;
+    line-height: 1.5;
+  }
+  
+  .tagline {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: $text-white;
+    text-transform: uppercase;
+  }
+}
+
+
+.testimonials-section {
+  background-color: $primary-color;
+  padding: 80px 0;
+  color: $text-white;
+  // text-align: center;
+}
+.carousel-container{
+  // background-color: #333333;
+  display: flex;
+}
+.carousel-track{
+display: flex;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+// Testimonial Card
+.testimonial-card {
+  // flex: 0 0 calc(33.333% - 40px);
+  flex: 0 0 calc(43.333% - 40px);
+  margin: 0 20px;
+  background-color: $card-bg;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 1199px) {
+    flex: 0 0 calc(50% - 40px);
+  }
+  
+  @media (max-width: 767px) {
+    flex: 0 0 calc(100% - 40px);
+  }
+  
+  .quote-mark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: $quote-color;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
     
-    &:focus {
-      outline: none;
-    }
-    
-    &[disabled] {
-      opacity: 0.5;
-      cursor: not-allowed;
+    .star {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e41c1c'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
   
-  .carousel-dots {
+  .testimonial-text {
+    color: $card-text;
+    font-size: 1.1rem;
+    // font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    // flex-grow: 1;
+    padding-left: 6px;
+  }
+  
+  .testimonial-author {
     display: flex;
-    margin: 0 20px;
+    align-items: center;
+    margin-top: auto;
+    // background-color: #333333;
     
-    .dot {
-      width: 12px;
-      height: 12px;
-      border: none;
+    .author-image {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.5);
-      margin: 0 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding: 0;
+      overflow: hidden;
+      margin-right: 15px;
       
-      &.active {
-        background-color: $text-white;
-        transform: scale(1.2);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .author-info {
+      .author-name {
+        font-weight: 700;
+        color: $card-text;
+        margin: 0 0 5px;
+        font-size: 1.1rem;
+      }
+      
+      .author-title {
+        font-size: 0.9rem;
+        // color: lighten($card-text, 20%);
+        color: black;
+        margin: 0;
       }
     }
   }
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.testimonial-slider {
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+.rating {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #ffd700; // Gold color for stars
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.testimonial-divider {
+  height: 1px;
+  background-color: $divider-color;
+  width: 100px;
+  margin: 10px auto;
+  opacity: 0.5;
+}
+
+.author-info {
+  .author-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .author-title {
+    font-size: 20px;
+    opacity: 0.8;
+    color: red;
+    
+    
+  }
+}
+
+// Navigation dots would be added here
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    
+    &.active {
+      background-color: $text-white;
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 90%;
+    padding: 20px;
+    
+    &.active {
+      flex: 0 0 90%;
+    }
+    
+    &.prev, &.next {
+      display: none;
+    }
+  }
+  
+  .testimonials-carousel {
+    .nav-arrow {
+      &.prev {
+        left: 10px;
+      }
+      
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+}
 }

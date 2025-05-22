@@ -55,7 +55,15 @@
               {{study.title}}:
               <span class="subtitle">{{study.subtitle}}</span>
             </h3>
-            <div class="metrics">
+            <div class="cta-read">
+            
+                <button class="cta-button">
+                 
+                  Read More
+                </button>
+             
+            </div>
+            <!-- <div class="metrics">
               <div class="metric">
                 <div class="metric-value">{{study.metrics.primary.value}}</div>
                 <div class="metric-label">{{study.metrics.primary.label}}</div>
@@ -64,9 +72,39 @@
                 <div class="metric-value">{{study.metrics.secondary.value}}</div>
                 <div class="metric-label">{{study.metrics.secondary.label}}</div>
               </div>
+            </div> -->
+
+            <div class="stats-container">
+              <div class="stat-item">
+                <div class="stat-value">{{study.metrics.primary.value}}</div>
+                <div class="stat-label">{{study.metrics.primary.label}}</div>
+              </div>
+              
+              
+              <div class="stat-item">
+                <div class="stat-value">{{study.metrics.secondary.value}}</div>
+                <!-- <div class="stat-label">{{study.metrics.secondary.label}}</div> -->
+                <div class="stat-label">
+                  <ng-container *ngIf="study.id === 2">
+                    {{ study.metrics.secondary.label.split(' in ')[0] }}<br />
+                    in {{ study.metrics.secondary.label.split(' in ')[1] }}
+                  </ng-container>
+                  <ng-container *ngIf="study.id !== 2">
+                    {{ study.metrics.secondary.label }}
+                  </ng-container>
+                </div>
+              </div>
+
+              
+              
+              
             </div>
+
+            
+            
           </div>
         </div>
+        
       </div>
       
       <!-- <div class="cta-container">
@@ -97,3 +135,16 @@
   </section>
 
   <app-testimonials></app-testimonials>
+
+
+  <div class="cta-container-2">
+    <a routerLink="/contact" style="text-decoration: none;">
+      <button class="cta-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+        Schedule A Consult
+      </button>
+    </a>
+  </div>
