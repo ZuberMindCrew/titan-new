@@ -40,119 +40,217 @@
   }
 
 
-  .logos-container {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-  }
+//   .logos-container {
+//     width: 100%;
+//     overflow-x: auto;
+//     -webkit-overflow-scrolling: touch;
+//     position: relative;
+//   }
   
-  .logos-track {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: max-content;
-    animation: scroll 30s linear infinite;
-  }
+//   .logos-track {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     align-items: center;
+//     width: max-content;
+//     animation: scroll 15s linear infinite;
+//   }
   
-  .logo-item {
-    flex: 0 0 auto;
-    margin: 0 66px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+//   .logo-item {
+//     flex: 0 0 auto;
+//     margin: 0 66px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
   
-  .logo-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
+//   .logo-item img {
+//     max-width: 100%;
+//     height: auto;
+//     display: block;
+//     object-fit: contain;
+//   }
   
-  /* Optional: Hide scrollbar for aesthetics */
-  .logos-container::-webkit-scrollbar {
-    display: none;
-  }
+//   /* Optional: Hide scrollbar for aesthetics */
+//   .logos-container::-webkit-scrollbar {
+//     display: none;
+//   }
   
-  @keyframes scroll {
-    0% {
+//   @keyframes scroll {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translateX(-50%);
+//     }
+//   }
+  
+//   /* Pause animation on hover */
+//   .logos-container:hover .logos-track {
+//     animation-play-state: paused;
+//   }
+  
+//   @media (max-width: 1200px) {
+//     .brands-section {
+//       padding: 70px 0;
+//     }
+    
+//     h2 {
+//       font-size: 32px;
+//       margin-bottom: 50px;
+//     }
+    
+//     .logo-item {
+//       padding: 0 30px;
+//     }
+    
+//     .logo-item img {
+//       // max-height: 70px;
+//       // max-width: 160px;
+//     }
+//   }
+  
+//   @media (max-width: 768px) {
+//     .brands-section {
+//       padding: 60px 0;
+//     }
+    
+//     h2 {
+//       font-size: 28px;
+//       margin-bottom: 40px;
+//     }
+    
+//     // .logo-item {
+//     //   padding: 0 20px;
+//     // }
+    
+//     // .logo-item img {
+//     //   max-height: 60px;
+//     //   max-width: 140px;
+//     // }
+//   }
+  
+//   @media (max-width: 480px) {
+//     .brands-section {
+//       padding: 50px 0;
+//     }
+    
+//     .container {
+//       padding: 0 20px;
+//     }
+    
+//     h2 {
+//       font-size: 24px;
+//       margin-bottom: 30px;
+//     }
+    
+//     .logo-item {
+//       padding: 0 15px;
+//       margin: 0 16px;
+//     }
+    
+//     .logo-item img {
+//       max-height: 150px;
+//       max-width: 120px;
+//     }
+
+
+//   }
+  
+
+
+
+
+
+
+
+/* Media Banner */
+.media-banner {
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  border-bottom: 2px solid black;
+}
+
+.media-banner h2 {
+  color: black;
+  font-size: 24px;
+  // margin-bottom: 30px;
+  font-weight: 600;
+}
+
+// .media-logos-container {
+//   overflow: hidden;
+//   position: relative;
+// }
+
+// .media-logos {
+//   display: flex;
+//   animation: scroll 20s linear infinite;
+//   width: fit-content;
+// }
+
+.media-logos-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Make sure the container takes up full width */
+  
+}
+
+.media-logos {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure logos stay in a single row */
+  animation: scroll 35s linear infinite;
+  width: max-content; /* Ensure all logos fit inside */
+  
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.media-logos-container:hover .media-logos {
+  animation-play-state: paused; /* Pause scrolling when hovering over the container */
+}
+
+.media-logo {
+  // width: 200px;
+  // height: 60px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 0 20px;
+  // flex-shrink: 0;
+  // width: 200px;
+  // height: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  flex-shrink: 0;
+  // background-color: rgb(255, 255, 255);
+  margin: 0px 20px;
+  
+}
+
+.media-logo img {
+  // max-width: 100%;
+  // max-height: 100%;
+  object-fit: contain;
+  padding: 6px 0px;
+  // filter: brightness(0) invert(1); /* Makes logos white */
+}
+
+@keyframes scroll {
+  0% {
       transform: translateX(0);
-    }
-    100% {
+  }
+  100% {
       transform: translateX(-50%);
-    }
   }
-  
-  /* Pause animation on hover */
-  .logos-container:hover .logos-track {
-    animation-play-state: paused;
-  }
-  
-  @media (max-width: 1200px) {
-    .brands-section {
-      padding: 70px 0;
-    }
-    
-    h2 {
-      font-size: 32px;
-      margin-bottom: 50px;
-    }
-    
-    .logo-item {
-      padding: 0 30px;
-    }
-    
-    .logo-item img {
-      // max-height: 70px;
-      // max-width: 160px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .brands-section {
-      padding: 60px 0;
-    }
-    
-    h2 {
-      font-size: 28px;
-      margin-bottom: 40px;
-    }
-    
-    // .logo-item {
-    //   padding: 0 20px;
-    // }
-    
-    // .logo-item img {
-    //   max-height: 60px;
-    //   max-width: 140px;
-    // }
-  }
-  
-  @media (max-width: 480px) {
-    .brands-section {
-      padding: 50px 0;
-    }
-    
-    .container {
-      padding: 0 20px;
-    }
-    
-    h2 {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-    
-    .logo-item {
-      padding: 0 15px;
-      margin: 0 16px;
-    }
-    
-    .logo-item img {
-      max-height: 150px;
-      max-width: 120px;
-    }
-
-
-  }
+}
   

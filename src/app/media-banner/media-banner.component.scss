@@ -62,19 +62,45 @@
 .media-banner h2 {
   color: black;
   font-size: 24px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   font-weight: 600;
 }
+
+// .media-logos-container {
+//   overflow: hidden;
+//   position: relative;
+// }
+
+// .media-logos {
+//   display: flex;
+//   animation: scroll 20s linear infinite;
+//   width: fit-content;
+// }
 
 .media-logos-container {
   overflow: hidden;
   position: relative;
+  width: 100%; /* Make sure the container takes up full width */
+  
 }
 
 .media-logos {
   display: flex;
-  animation: scroll 20s linear infinite;
-  width: fit-content;
+  flex-wrap: nowrap; /* Ensure logos stay in a single row */
+  animation: scroll 35s linear infinite;
+  width: max-content; /* Ensure all logos fit inside */
+  
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.media-logos-container:hover .media-logos {
+  animation-play-state: paused; /* Pause scrolling when hovering over the container */
 }
 
 .media-logo {
@@ -94,6 +120,7 @@
   flex-shrink: 0;
   // background-color: rgb(255, 255, 255);
   margin: 0px 20px;
+  
 }
 
 .media-logo img {

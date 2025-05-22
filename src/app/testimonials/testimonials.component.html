@@ -1,4 +1,6 @@
-<section class="testimonials-section">
+<!-- 
+
+  <section class="testimonials-section">
     <div class="container">
       <div class="testimonials-header">
         <h2 class="main-heading">THE RESULTS</h2>
@@ -38,12 +40,6 @@
         </div>
   
         <div class="carousel-navigation">
-          <!-- <button class="nav-arrow prev-arrow" [disabled]="currentSlide === 0" (click)="prevSlide()" aria-label="Previous testimonials">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-           -->
           <div class="carousel-dots">
             <button 
               class="dot" 
@@ -63,26 +59,86 @@
               (click)="goToSlide(2)"
               aria-label="Go to slide 3">
             </button>
-            <!-- <button 
-              class="dot" 
-              [class.active]="currentSlide === 3"
-              (click)="goToSlide(3)"
-              aria-label="Go to slide 4">
-            </button> -->
-            <!-- <button 
-              class="dot" 
-              [class.active]="currentSlide === 4"
-              (click)="goToSlide(4)"
-              aria-label="Go to slide 5">
-            </button> -->
           </div>
-          
-          <!-- <button class="nav-arrow next-arrow" [disabled]="currentSlide === totalSlides - 1" (click)="nextSlide()" aria-label="Next testimonials">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button> -->
+        </div>
+      </div> 
+    </div> 
+  </section> 
+ -->
+
+
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <h2 class="main-heading">THE PROOF IS IN THE PERFORMANCE.</h2>
+    <h2 class="sub-heading">We don’t follow playbooks — we build new ones.</h2>
+    <p class="description">
+      Our clients don’t rise — they reset the standard.
+    </p>
+    <p class="description">Bold Strategy. &nbsp;&nbsp;Measurable ROI.   &nbsp;&nbsp;Unmatched Leadership.</p>
+    <p class="tagline">These aren’t stories — they’re results you can’t ignore.</p>
+  </div>
+
+  <div class="testimonials-carousel">
+    <!-- <button class="nav-arrow prev" (click)="prevSlide()">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+    </button> -->
+
+    <div class="carousel-container">
+      <div class="carousel-track" #carouselTrack>
+        <!-- <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index"
+          [class.active]="currentSlide === i"
+          [class.prev]="currentSlide - 1 === i || (currentSlide === 0 && i === testimonials.length - 1)"
+          [class.next]="currentSlide + 1 === i || (currentSlide === testimonials.length - 1 && i === 0)"> -->
+          <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index"
+          [class.active]="currentSlide === i"
+          [class.prev]="currentSlide - 1 === i || (currentSlide === 0 && i === testimonials.length - 1)"
+          [class.next]="currentSlide + 1 === i || (currentSlide === testimonials.length - 1 && i === 0)">
+          <h3 class="testimonital-header">{{testimonial.tagline}}</h3>
+          <p class="testimonial-text">
+            {{testimonial.quote}}
+          </p>
+          <!-- <p class="testimonial-para" style="white-space: pre-line">
+            {{testimonial.para}}
+          </p> -->
+
+          <p class="testimonial-para" [class.long-para]="testimonial.customClass === 'long-para'"
+            style="white-space: pre-line">
+            {{testimonial.para}}
+          </p>
+          <div class="testimonial-divider"></div>
+          <!-- <div class="testimonial-author">
+            <h4 class="author-name">{{testimonial.name}}</h4>
+            <p class="author-title">{{testimonial.title}}</p>
+          </div> -->
+          <div class="testimonial-author">
+            <div class="author-image">
+              <img [src]="testimonial.image" [alt]="testimonial.name">
+            </div>
+            <div class="author-info">
+              <h4 class="author-name">{{testimonial.name}} <span>{{testimonial.customClass}}</span></h4>
+              <p class="author-title">{{testimonial.title1}}</p>
+              <p class="author-title">{{testimonial.title2}}</p>
+              <p class="author-title">{{testimonial.title3}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+
+    
+
+    <!-- <button class="nav-arrow next" (click)="nextSlide()">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+    </button> -->
+
+    <div class="carousel-dots">
+      <!-- <button class="dot" *ngFor="let dot of getDotArray(); let i = index" [class.active]="currentSlide === i"
+        (click)="goToSlide(i)" [attr.aria-label]="'Go to slide ' + (i + 1)">
+      </button> -->
+      <button class="dot" *ngFor="let dot of getDotArray(); let i = index" [class.active]="currentSlide === i"
+      (click)="goToSlide(i)" [attr.aria-label]="'Go to slide ' + (i + 1)">
+    </button>
+    </div>
+  </div>
+  
+</section>

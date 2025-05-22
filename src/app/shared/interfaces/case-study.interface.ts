@@ -2,6 +2,8 @@ export interface CaseStudy {
   id: number;
   title: string;
   subtitle: string;
+  tagLine:String;
+  tagLine2:String;
   heroImage: string;
   metrics: {
     primary: {

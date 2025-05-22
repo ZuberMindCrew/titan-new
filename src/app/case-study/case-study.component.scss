@@ -310,6 +310,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  cursor: pointer;
 }
 .story-card:hover .card-image img {
   transform: scale(1.05);
@@ -335,10 +336,11 @@ body {
 /* Update the card-content styles */
 .card-content {
   // padding: 1.5rem;
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0px 0px 0px;
   display: flex;
   flex-direction: column;
-  height: 50%;
+  cursor: pointer;
+  // height: 50%;
 }
 
 
@@ -404,6 +406,13 @@ body {
   text-align: center;
 }
 
+.cta-read{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .cta-container {
   display: flex;
   justify-content: center;
@@ -411,6 +420,12 @@ body {
 }
 .cta-container a {
   text-decoration: none;
+}
+.cta-container-2{
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .cta-button {
@@ -529,5 +544,48 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+
+
+.stats-container {
+  display: flex;
+  justify-content: space-around; /* or space-between */
+  // align-items: flex-start; /* This aligns all items at the top */
+  // flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 20px; /* Adds space between items */
+  margin-top: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  text-align: center;
+  // max-width: 200px; /* Adjust as needed */
+}
+
+.stat-value {
+  // font-size: 24px;
+  // font-weight: bold;
+  // margin-bottom: 8px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a1a4b;
+  line-height: 1;
+  text-align: center;
+}
+
+.stat-label {
+  // font-size: 14px;
+  // line-height: 1.3;
+
+  font-size: 20px;
+  color: #0C0C3C;
+  font-weight: 600;
+  margin-top: 0.5rem;
+   max-width: 200px;
+  text-align: center;
+}
 
 

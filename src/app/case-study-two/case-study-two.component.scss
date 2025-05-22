@@ -105,7 +105,9 @@
       }
 
       p {
-        font-size: 24px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 5px;
       }
 
       .hero-image {
@@ -317,17 +319,17 @@
       background-color: #f9f7f6;
 
       .result-percentage {
-        font-size: 20px;
+        // font-size: 20px;
         font-weight: 700;
         color: #0c0c3c;
-        margin-right: 16px;
+        margin-right: 6px;
       }
 
       .result-description {
         color: #0c0c3c;
         font-family: "Montserrat", sans-serif;
         font: 20px;
-        font-weight: 600;
+        font-weight: 400;
       }
     }
   }
